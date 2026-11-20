@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0a0f0a">
-<title>AFRAME | Зеркальный А-Фрейм — Чёнки</title>
+<title>Aframe_chenki — треугольные домики в 3 км от Гомеля</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap');
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; -webkit-tap-highlight-color: transparent; }
@@ -14,6 +14,8 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
 .screen { position: relative; min-height: 100vh; min-height: 100dvh; width: 100%; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 #hero { background: #0a0f0a; text-align: center; padding: 20px; overflow: hidden; }
 #hero-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%) scale(1.05); z-index: 0; object-fit: cover; filter: brightness(0.5) saturate(0.9) contrast(1.05); will-change: transform; }
+.hero-bg { position: absolute; inset: 0; z-index: 0; background: url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/сам-домик-на-заглавную.png') center/cover no-repeat; filter: brightness(0.8) saturate(1.08) contrast(1.02); animation: heroZoom 22s ease-in-out infinite alternate; will-change: transform; }
+@keyframes heroZoom { from { transform: scale(1); } to { transform: scale(1.12); } }
 #hero .video-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(10,15,10,0.6) 0%, rgba(10,15,10,0.75) 50%, rgba(10,15,10,0.95) 100%), radial-gradient(circle at 50% 50%, rgba(100,140,90,0.08) 0%, transparent 60%); pointer-events: none; }
 #hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(100,140,90,0.12) 0%, transparent 60%); z-index: 1; animation: heroPulse 7s ease-in-out infinite; pointer-events: none; }
 @keyframes heroPulse { 0%, 100% { opacity: 0.5; transform: scale(1); } 50% { opacity: 1; transform: scale(1.1); } }
@@ -23,7 +25,7 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
 .hero-inner { position: relative; z-index: 3; max-width: 1000px; animation: fadeInUp 1.8s cubic-bezier(0.2, 0.8, 0.2, 1); will-change: transform; padding: 0 16px; }
 .hero-tag { display: inline-block; font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: #c8b88a; font-weight: 500; margin-bottom: 28px; padding: 8px 18px; border: 1px solid rgba(200,184,138,0.35); border-radius: 30px; background: rgba(200,184,138,0.08); backdrop-filter: blur(10px); animation: tagShine 3.5s ease-in-out infinite; }
 @keyframes tagShine { 0%, 100% { box-shadow: 0 0 0 0 rgba(200,184,138,0); } 50% { box-shadow: 0 0 20px 4px rgba(200,184,138,0.25); } }
-.hero-inner h1 { font-size: clamp(2.4rem, 9vw, 7rem); font-weight: 900; text-transform: uppercase; letter-spacing: -2px; line-height: 0.95; margin-bottom: 24px; background: linear-gradient(to right, #f0ede6 25%, #d4af6a 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 10px 40px rgba(0,0,0,0.5); animation: titleBreathe 6s ease-in-out infinite; }
+.hero-inner h1 { font-size: clamp(1.7rem, 6.5vw, 5rem); font-weight: 900; text-transform: uppercase; letter-spacing: -1px; line-height: 0.95; margin-bottom: 24px; background: linear-gradient(to right, #f0ede6 25%, #d4af6a 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 10px 40px rgba(0,0,0,0.5); animation: titleBreathe 6s ease-in-out infinite; }
 @keyframes titleBreathe { 0%, 100% { filter: drop-shadow(0 0 15px rgba(200,184,138,0.25)); } 50% { filter: drop-shadow(0 0 30px rgba(200,184,138,0.5)); } }
 .hero-sub { font-size: clamp(0.9rem, 3.5vw, 1.25rem); color: #c0bbb0; font-weight: 300; letter-spacing: 1.5px; max-width: 600px; margin: 0 auto 40px; line-height: 1.6; padding: 0 10px; }
 .hero-cta { display: inline-block; padding: 18px 46px; background: linear-gradient(135deg, #d4af6a, #b8945a); color: #1a1508; font-size: 13px; font-weight: 900; text-transform: uppercase; letter-spacing: 3px; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; box-shadow: 0 15px 40px rgba(212,175,106,0.35); transition: all 0.3s; animation: ctaPulse 3s ease-in-out infinite; font-family: inherit; position: relative; }
@@ -199,6 +201,20 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
 .bk-submit:active { transform: scale(0.98); }
 .bk-submit:disabled { background: #2a2a24; color: #6a6a60; box-shadow: none; cursor: not-allowed; transform: none; }
 .bk-policy { font-size: 10.5px; color: #7a7a70; text-align: center; line-height: 1.6; margin-top: 14px; }
+.hp-field { position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.pay-block { display: none; max-width: 480px; margin: 0 auto; text-align: center; background: rgba(20,30,20,0.92); border: 1px solid rgba(200,184,138,0.3); border-radius: 18px; padding: 26px 22px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+.pay-block.show { display: block; animation: stepIn 0.5s cubic-bezier(0.2,0.8,0.2,1); }
+.pay-title { font-size: 22px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 8px; background: linear-gradient(to right,#f0ede6 30%,#d4af6a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.pay-sub { font-size: 13px; color: #b0aa9e; margin-bottom: 20px; }
+.pay-card { background: rgba(212,175,106,0.08); border: 1px solid rgba(212,175,106,0.35); border-radius: 14px; padding: 16px; margin-bottom: 18px; }
+.pay-card-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #c0bbb0; margin-bottom: 8px; }
+.pay-card-num { font-size: 20px; font-weight: 900; letter-spacing: 1px; color: #f0ede6; margin-bottom: 12px; word-break: break-all; }
+.pay-copy { padding: 10px 18px; background: rgba(212,175,106,0.15); border: 1px solid rgba(212,175,106,0.5); border-radius: 10px; color: #d4af6a; font-size: 12px; font-weight: 700; cursor: pointer; font-family: inherit; }
+.pay-copy:active { transform: scale(0.97); }
+.pay-steps { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; text-align: left; }
+.pay-step { display: flex; align-items: center; gap: 12px; font-size: 13px; color: #c8c3b8; }
+.pay-step span { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(135deg,#d4af6a,#b8945a); color: #0a0f0a; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px; }
+.pay-send { display: block; width: 100%; padding: 16px; background: linear-gradient(135deg,#d4af6a,#b8945a); color: #1a1508; border-radius: 12px; font-size: 14px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; box-shadow: 0 10px 30px rgba(212,175,106,0.35); }
 .bk-toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-120%); background: #1a2018; color: #e8e4dc; border: 1px solid rgba(200,184,138,0.3); padding: 14px 22px; border-radius: 12px; font-size: 14px; font-weight: 600; z-index: 100000; transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); max-width: calc(100% - 32px); text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
 .bk-toast.show { transform: translateX(-50%) translateY(0); }
 .bk-toast.success { border-color: rgba(200,184,138,0.6); color: #d4af6a; }
@@ -207,6 +223,23 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
 .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; padding: 14px 16px calc(14px + env(safe-area-inset-bottom)); background: linear-gradient(to top, rgba(10,15,10,0.98) 0%, rgba(10,15,10,0.85) 100%); backdrop-filter: blur(20px); border-top: 1px solid rgba(200,184,138,0.2); z-index: 50; }
 .sticky-cta button { width: 100%; padding: 16px; background: linear-gradient(135deg, #d4af6a, #b8945a); color: #1a1508; border: none; border-radius: 12px; font-size: 14px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; font-family: inherit; box-shadow: 0 8px 24px rgba(212,175,106,0.35); -webkit-appearance: none; }
 .sticky-cta button:active { transform: scale(0.98); }
+/* Свайп-галерея — на всех экранах */
+.scene { display: none; }
+.gallery-swipe { display: block; width: 100%; }
+.gallery-title { position: relative; top: 0; left: 0; transform: none; margin-bottom: 18px; }
+#gallery { padding: 60px 0 40px; justify-content: flex-start; min-height: auto; }
+.gs-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 6px 24px 20px; scrollbar-width: none; }
+.gs-track::-webkit-scrollbar { display: none; }
+.gs-card { flex: 0 0 30%; scroll-snap-align: center; position: relative; aspect-ratio: 3 / 4; border-radius: 22px; overflow: hidden; background: #0d1410; border: 1px solid rgba(200,220,180,0.12); box-shadow: 0 18px 44px rgba(0,0,0,0.5); }
+.gs-photo { position: absolute; inset: 0; background-size: cover; background-position: center; filter: brightness(0.9) contrast(1.05); }
+.gs-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,15,10,0.95) 0%, rgba(10,15,10,0.2) 45%, transparent 70%); }
+.gs-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 22px 20px; z-index: 2; }
+.gs-tag { display: inline-block; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: #d4af6a; font-weight: 700; background: rgba(212,175,106,0.14); padding: 5px 10px; border-radius: 20px; border: 1px solid rgba(212,175,106,0.3); margin-bottom: 10px; }
+.gs-title { font-size: 22px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.5px; line-height: 1; margin-bottom: 6px; background: linear-gradient(to right, #f0ede6 30%, #d4af6a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.gs-desc { font-size: 12px; color: #c0bbb0; }
+.gs-dots { display: flex; justify-content: center; gap: 6px; margin-top: 4px; }
+.gs-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.25); transition: all 0.3s; }
+.gs-dot.active { background: #d4af6a; width: 20px; border-radius: 3px; }
 @media (max-width: 768px) {
   #hero { background-attachment: scroll; background-position: center top; }
   .carousel { width: 240px; height: 340px; }
@@ -215,9 +248,8 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
   .mirror-content { padding: 18px 16px; }
   .mirror-desc { font-size: 10.5px; }
   .mirror-tag { font-size: 8.5px; padding: 4px 8px; letter-spacing: 2px; }
-  .scene { perspective: 1100px; height: 70vh; height: 70dvh; margin-top: 30px; }
-  .gallery-title { top: 30px; }
-  #gallery { padding: 60px 0 40px; }
+  .gs-track { gap: 14px; padding: 6px 20px 18px; }
+  .gs-card { flex: 0 0 76%; }
   #booking-screen { padding: 50px 14px 130px; }
   .booking-header { margin-bottom: 24px; }
   .sticky-cta { display: block; }
@@ -279,23 +311,28 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
 </head>
 <body>
 
+<!-- ФОТО (репо aframe_photo, ветка main):
+     Заглавная: сам-домик-на-заглавную.png
+     Домик 1: в домике 1.png | в домике 1 вид.png | в домике 1 туалет.png | 2026-11-20 16.18.58.png
+     Домик 2: улица-домик-2.png | улица-зона-отдыха-домик-2.png | купель-и-баня-домик-2.png | barbeku-domik-nomer-2.png (postimg)
+     Купель: купель.png
+     Баня: images/banya-1.jpg ... banya-4.jpg (репо сайта) -->
+
 <canvas id="bgCanvas"></canvas>
 
 <section class="screen" id="hero">
-  <video id="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?q=80&w=2000&auto=format&fit=crop">
-    <source src="https://videos.pexels.com/video-files/1526909/1526909-hd_1920_1080_24fps.mp4" type="video/mp4">
-  </video>
+  <div class="hero-bg"></div>
   <div class="video-overlay"></div>
   <div class="hero-stars" id="heroStars"></div>
   <div class="hero-inner">
-    <span class="hero-tag">◆ Эксклюзивный отдых · Чёнки</span>
-    <h1>Зеркальный<br>А-Фрейм</h1>
-    <p class="hero-sub">Треугольные домики с панорамным остеклением. Баня, купель и тишина. Без соседей. Без компромиссов.</p>
+    <span class="hero-tag">◆ Отдых в Чёнках · 3 км от Гомеля</span>
+    <h1>Aframe_chenki</h1>
+    <p class="hero-sub">Треугольные домики в 3 км от Гомеля. Зона барбекю, баня, купель, беседка, качели, бассейн.</p>
     <a href="#booking-screen" class="hero-cta">Забронировать сейчас</a>
     <br>
-    <a href="https://yandex.by/maps/-/CXGdARjz" target="_blank" rel="noopener" class="panorama-btn">
+    <a href="https://yandex.by/maps/org/afreym_chenki/174703613605/?ll=30.982732%2C52.347087&z=16" target="_blank" rel="noopener" class="panorama-btn">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 0 1 10 10M12 2a10 10 0 0 0-10 10M22 12a10 10 0 0 1-10 10M2 12a10 10 0 0 0 10 10"/></svg>
-      Смотреть 360° панораму
+      Мы на карте
     </a>
   </div>
   <a href="#gallery" class="scroll-down" aria-label="Листать вниз">
@@ -318,6 +355,16 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
       <div class="mirror"><div class="mirror-inner"><div class="mirror-photo" style="background-image:url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=1200&auto=format&fit=crop')"></div><div class="mirror-content"><span class="mirror-tag">Комплекс</span><div class="mirror-title">Всё включено</div><div class="mirror-desc">Домик + баня + купель</div></div><div class="mirror-shadow"></div></div></div>
     </div>
   </div>
+  <div class="gallery-swipe">
+    <div class="gs-track">
+      <div class="gs-card"><div class="gs-photo" style="background-image:url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?q=80&w=900&auto=format&fit=crop')"></div><div class="gs-info"><span class="gs-tag">Домик №1</span><div class="gs-title">А-Фрейм №1</div><div class="gs-desc">Панорамное окно · 2-4 гостя</div></div></div>
+      <div class="gs-card"><div class="gs-photo" style="background-image:url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=900&auto=format&fit=crop')"></div><div class="gs-info"><span class="gs-tag">Баня</span><div class="gs-title">Русская баня</div><div class="gs-desc">На дровах · до 8 человек</div></div></div>
+      <div class="gs-card"><div class="gs-photo" style="background-image:url('https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=900&auto=format&fit=crop')"></div><div class="gs-info"><span class="gs-tag">Купель</span><div class="gs-title">Кедровая купель</div><div class="gs-desc">Под открытым небом · круглый год</div></div></div>
+      <div class="gs-card"><div class="gs-photo" style="background-image:url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=900&auto=format&fit=crop')"></div><div class="gs-info"><span class="gs-tag">Домик №2</span><div class="gs-title">А-Фрейм №2</div><div class="gs-desc">Терраса · вид на лес · 2-6 гостей</div></div></div>
+      <div class="gs-card"><div class="gs-photo" style="background-image:url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=900&auto=format&fit=crop')"></div><div class="gs-info"><span class="gs-tag">Комплекс</span><div class="gs-title">Всё включено</div><div class="gs-desc">Домик + баня + купель</div></div></div>
+    </div>
+    <div class="gs-dots" id="gsDots"></div>
+  </div>
 </section>
 
 <section class="screen" id="booking-screen">
@@ -335,6 +382,7 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
       <div class="progress-step" data-step="3"><div class="progress-dot">3</div><div class="progress-label">Данные</div></div>
     </div>
     <form class="bk-form-inline" id="bkForm" novalidate>
+      <input type="text" name="website" id="hpWebsite" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="price-hint">
         <div class="price-hint-item"><span class="ico">📅</span><span class="lbl">Будни:</span><span class="val">300 Br</span></div>
         <div class="price-hint-item"><span class="ico">🎉</span><span class="lbl">Выходные:</span><span class="val">350 Br</span></div>
@@ -345,10 +393,10 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
         <div class="house-grid">
           <button type="button" class="house-card active" data-house="1">
             <div class="house-slideshow" data-slideshow="1">
-              <div class="hs-slide active" style="background-image:url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?q=80&w=1000&auto=format&fit=crop')"></div>
-              <div class="hs-slide" style="background-image:url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1000&auto=format&fit=crop')"></div>
-              <div class="hs-slide" style="background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000&auto=format&fit=crop')"></div>
-              <div class="hs-slide" style="background-image:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1000&auto=format&fit=crop')"></div>
+              <div class="hs-slide active" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/в домике 1.png')"></div>
+              <div class="hs-slide" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/в домике 1 вид.png')"></div>
+              <div class="hs-slide" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/в домике 1 туалет.png')"></div>
+              <div class="hs-slide" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/2026-11-20 16.18.58.png')"></div>
               <span class="house-badge">◆ Домик №1</span><span class="house-check">✓</span>
               <div class="hs-dots"><span class="hs-dot active"></span><span class="hs-dot"></span><span class="hs-dot"></span><span class="hs-dot"></span></div>
             </div>
@@ -356,10 +404,10 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
           </button>
           <button type="button" class="house-card" data-house="2">
             <div class="house-slideshow" data-slideshow="2">
-              <div class="hs-slide active" style="background-image:url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1000&auto=format&fit=crop')"></div>
-              <div class="hs-slide" style="background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1000&auto=format&fit=crop')"></div>
-              <div class="hs-slide" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop')"></div>
-              <div class="hs-slide" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop')"></div>
+              <div class="hs-slide active" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/улица-домик-2.png')"></div>
+              <div class="hs-slide" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/улица-зона-отдыха-домик-2.png')"></div>
+              <div class="hs-slide" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/купель-и-баня-домик-2.png')"></div>
+              <div class="hs-slide" style="background-image:url('https://i.postimg.cc/5yc1b25Z/barbeku-domik-nomer-2.png')"></div>
               <span class="house-badge">◆ Домик №2</span><span class="house-check">✓</span>
               <div class="hs-dots"><span class="hs-dot active"></span><span class="hs-dot"></span><span class="hs-dot"></span><span class="hs-dot"></span></div>
             </div>
@@ -389,12 +437,11 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
             <button type="button" class="bk-serv" data-service="both" data-price="250"><span class="bk-serv-ico">🔥</span><span class="bk-serv-name">Баня + Купель</span><span class="bk-serv-price">250 Br <small>выгодно</small></span></button>
           </div>
           <div id="service-preview">
-            <div class="sp-slide active" data-service-img="banya" style="background-image:url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop')"></div>
-            <div class="sp-slide" data-service-img="banya" style="background-image:url('https://images.unsplash.com/photo-1610555356070-d0efb6505f81?q=80&w=1200&auto=format&fit=crop')"></div>
-            <div class="sp-slide" data-service-img="banya" style="background-image:url('https://images.unsplash.com/photo-1600965962361-9035dbfd1c50?q=80&w=1200&auto=format&fit=crop')"></div>
-            <div class="sp-slide" data-service-img="kupel" style="background-image:url('https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1200&auto=format&fit=crop')"></div>
-            <div class="sp-slide" data-service-img="kupel" style="background-image:url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1200&auto=format&fit=crop')"></div>
-            <div class="sp-slide" data-service-img="kupel" style="background-image:url('https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1200&auto=format&fit=crop')"></div>
+            <div class="sp-slide active" data-service-img="banya" style="background-image:url('images/banya-1.jpg')"></div>
+            <div class="sp-slide" data-service-img="banya" style="background-image:url('images/banya-2.jpg')"></div>
+            <div class="sp-slide" data-service-img="banya" style="background-image:url('images/banya-3.jpg')"></div>
+            <div class="sp-slide" data-service-img="banya" style="background-image:url('images/banya-4.jpg')"></div>
+            <div class="sp-slide" data-service-img="kupel" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/купель.png')"></div>
             <div class="sp-slide" data-service-img="both" style="background-image:url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop')"></div>
             <div class="sp-slide" data-service-img="both" style="background-image:url('https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1200&auto=format&fit=crop')"></div>
             <div class="sp-slide" data-service-img="both" style="background-image:url('https://images.unsplash.com/photo-1600965962361-9035dbfd1c50?q=80&w=1200&auto=format&fit=crop')"></div>
@@ -437,11 +484,27 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
         <p class="bk-policy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.<br>Бронь считается подтверждённой после внесения предоплаты и звонка менеджера.</p>
       </div>
     </form>
+    <div class="pay-block" id="payBlock">
+      <div class="pay-title">✅ Заявка принята!</div>
+      <div class="pay-sub">Осталось внести предоплату 100 Br — и дата за вами</div>
+      <div class="pay-card">
+        <div class="pay-card-label">💳 Перевод на карту</div>
+        <div class="pay-card-num" id="payCardNum">9112 3801 7346 8689</div>
+        <button type="button" class="pay-copy" id="payCopy">📋 Скопировать номер</button>
+      </div>
+      <div class="pay-steps">
+        <div class="pay-step"><span>1</span> Переведите 100 Br на карту</div>
+        <div class="pay-step"><span>2</span> Сделайте скрин оплаты</div>
+        <div class="pay-step"><span>3</span> Отправьте скрин нам — мы подтвердим бронь</div>
+      </div>
+      <a class="pay-send" id="paySend" href="https://instagram.com/" target="_blank" rel="noopener">📸 Отправить скрин в Instagram</a>
+    </div>
   </div>
 </section>
 
 <div class="sticky-cta"><button type="button" id="stickyBook">🏡 Забронировать домик</button></div>
 <canvas id="bkCanvas"></canvas>
+
 <script>
 // Фон (светлячки)
 (function() {
@@ -474,16 +537,19 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
 // Основной скрипт
 (function () {
   "use strict";
+  
   const CONFIG = {
     submitUrl: "https://script.google.com/macros/s/AKfycbx64AsrgtgLiqjV3cshq4VaerEzf_zMOMDPNtvS7BUhTlQWi2QWOY_TXgrTaNb9gFq2/exec",
     houses: { "1": { name: "А-Фрейм №1", priceWeekday: 300, priceWeekend: 350 }, "2": { name: "А-Фрейм №2", priceWeekday: 300, priceWeekend: 350 } },
     guestExtra: 50, baseGuests: 2
   };
+
   const $ = (id) => document.getElementById(id);
   const state = { house: "1", date: "", guests: 2, service: "none", servicePrice: 0 };
   let viewDate = new Date();
   let bookedCache = { "1": [], "2": [] };
   let isSubmitting = false;
+
   function showToast(message, type) {
     let toast = document.querySelector('.bk-toast');
     if (toast) toast.remove();
@@ -492,67 +558,146 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
     toast.textContent = message;
     document.body.appendChild(toast);
     requestAnimationFrame(() => toast.classList.add('show'));
-    setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 400); }, 5000);
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => toast.remove(), 400);
+    }, 5000);
   }
+
+  function showPayBlock() {
+    const f = $("bkForm");
+    const pb = $("payBlock");
+    if (f) f.style.display = "none";
+    if (pb) { pb.classList.add("show"); setTimeout(() => pb.scrollIntoView({ behavior: 'smooth', block: 'center' }), 120); }
+  }
+
+  const payCopyBtn = $("payCopy");
+  if (payCopyBtn) {
+    payCopyBtn.onclick = function() {
+      const numEl = $("payCardNum");
+      const num = numEl ? numEl.textContent.replace(/\s/g, "") : "";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(num).then(() => showToast("Номер карты скопирован", "success"));
+      } else {
+        showToast("Номер: " + num, "success");
+      }
+    };
+  }
+
   async function loadBookings() {
     try {
       const url = CONFIG.submitUrl + "?action=list&_=" + Date.now();
       const res = await fetch(url, { cache: "no-store" });
       if (!res.ok) throw new Error("HTTP " + res.status);
       const data = await res.json();
-      if (data && data.ok && data.booked) { bookedCache = data.booked; }
-    } catch (e) { console.error("loadBookings error:", e); }
+      if (data && data.ok && data.booked) {
+        bookedCache = data.booked;
+        console.log("✅ Брони загружены:", bookedCache);
+      } else {
+        console.warn("⚠️ Скрипт ответил, но данных нет:", data);
+      }
+    } catch (e) { 
+      console.error("❌ Ошибка загрузки броней:", e); 
+    }
   }
-  function isBooked(houseId, iso) { return bookedCache[houseId] && bookedCache[houseId].indexOf(iso) !== -1; }
+
+  function isBooked(houseId, iso) {
+    return bookedCache[houseId] && bookedCache[houseId].indexOf(iso) !== -1;
+  }
+
   function renderCalendar() {
-    const calMonth = $("calMonth"), calDays = $("calDays");
+    const calMonth = $("calMonth");
+    const calDays = $("calDays");
     if (!calMonth || !calDays) return;
-    const year = viewDate.getFullYear(), month = viewDate.getMonth();
+
+    const year = viewDate.getFullYear();
+    const month = viewDate.getMonth();
     const monthNames = ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
     calMonth.textContent = monthNames[month] + " " + year;
+    
     const firstDay = new Date(year, month, 1);
-    let startWeekday = firstDay.getDay() - 1; if (startWeekday < 0) startWeekday = 6;
+    let startWeekday = firstDay.getDay() - 1; 
+    if (startWeekday < 0) startWeekday = 6;
+    
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const today = new Date();
     const todayStr = today.getFullYear() + "-" + String(today.getMonth()+1).padStart(2,"0") + "-" + String(today.getDate()).padStart(2,"0");
+    
     calDays.innerHTML = "";
-    for (let i = 0; i < startWeekday; i++) { const e = document.createElement("div"); e.className = "cal-day empty"; calDays.appendChild(e); }
+    
+    for (let i = 0; i < startWeekday; i++) {
+      const empty = document.createElement("div"); 
+      empty.className = "cal-day empty"; 
+      calDays.appendChild(empty);
+    }
+    
     for (let d = 1; d <= daysInMonth; d++) {
       const iso = year + "-" + String(month+1).padStart(2,"0") + "-" + String(d).padStart(2,"0");
       const btn = document.createElement("button");
-      btn.type = "button"; btn.className = "cal-day"; btn.textContent = d;
+      btn.type = "button"; 
+      btn.className = "cal-day"; 
+      btn.textContent = d;
+      
       if (iso === todayStr) btn.classList.add("today");
       if (iso < todayStr) btn.classList.add("past");
       if (iso === state.date) btn.classList.add("selected");
-      if (isBooked(state.house, iso)) { btn.classList.add("disabled"); btn.disabled = true; }
+      
+      if (isBooked(state.house, iso)) { 
+        btn.classList.add("disabled"); 
+        btn.disabled = true; 
+      }
+      
       btn.onclick = function() {
         if (this.classList.contains("disabled") || this.classList.contains("past") || this.classList.contains("empty")) return;
+        
         state.date = iso;
         document.querySelectorAll(".cal-day").forEach(el => el.classList.remove("selected"));
         this.classList.add("selected");
-        const step3 = $("step3"); if (step3) step3.classList.add("visible");
-        recalc(); updateProgress();
+        
+        const step3 = $("step3");
+        if (step3) step3.classList.add("visible");
+        
+        recalc();
+        updateProgress();
+        
         setTimeout(() => { if (step3) step3.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 300);
       };
+      
       calDays.appendChild(btn);
     }
-    const prevBtn = $("calPrev");
-    if (prevBtn) prevBtn.disabled = (year === new Date().getFullYear() && month === new Date().getMonth());
+
+    const curMonth = new Date();
+    if (year === curMonth.getFullYear() && month === curMonth.getMonth()) {
+      const prevBtn = $("calPrev");
+      if (prevBtn) prevBtn.disabled = true;
+    } else {
+      const prevBtn = $("calPrev");
+      if (prevBtn) prevBtn.disabled = false;
+    }
   }
-  const pBtn = $("calPrev"), nBtn = $("calNext");
+
+  const pBtn = $("calPrev");
+  const nBtn = $("calNext");
   if (pBtn) pBtn.onclick = function() { viewDate.setMonth(viewDate.getMonth() - 1); renderCalendar(); };
   if (nBtn) nBtn.onclick = function() { viewDate.setMonth(viewDate.getMonth() + 1); renderCalendar(); };
+
   const cards = document.querySelectorAll(".house-card");
   for (let i = 0; i < cards.length; i++) {
     cards[i].onclick = function() {
       for (let j = 0; j < cards.length; j++) cards[j].classList.remove("active");
       this.classList.add("active");
+      
       state.house = this.getAttribute("data-house");
+      
       renderCalendar();
       const step2 = $("step2");
-      if (step2) { step2.classList.add("visible"); setTimeout(() => step2.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200); }
+      if (step2) {
+        step2.classList.add("visible");
+        setTimeout(() => step2.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
+      }
     };
   }
+
   const servs = document.querySelectorAll(".bk-serv");
   for (let i = 0; i < servs.length; i++) {
     servs[i].onclick = function() {
@@ -560,151 +705,408 @@ body { background: #0a0f0a; background-image: radial-gradient(ellipse at 20% 0%,
       this.classList.add("active");
       state.service = this.getAttribute("data-service");
       state.servicePrice = parseInt(this.getAttribute("data-price")) || 0;
-      const spLabel = $("spLabel"); if (spLabel) spLabel.textContent = this.querySelector(".bk-serv-name").textContent;
+      
+      const serviceLabel = $("spLabel");
+      if (serviceLabel) {
+        serviceLabel.textContent = this.querySelector(".bk-serv-name").textContent;
+      }
       recalc();
     };
   }
+
   const guestsSel = $("bkGuests");
-  if (guestsSel) guestsSel.onchange = function() { state.guests = parseInt(this.value) || 2; recalc(); };
+  if (guestsSel) {
+    guestsSel.onchange = function() {
+      state.guests = parseInt(this.value) || 2;
+      recalc();
+    };
+  }
+
   function recalc() {
-    const houseLabel = $("bkHouseLabel"), basePriceEl = $("bkBasePrice"), dateLabel = $("bkDateLabel");
-    const guestsRow = $("bkGuestsRow"), guestsPriceEl = $("bkGuestsPrice");
-    const serviceRow = $("bkServiceRow"), servicePriceEl = $("bkServicePrice");
-    const totalEl = $("bkTotal"), dayHint = $("bkDayHint");
+    const houseLabel = $("bkHouseLabel");
+    const basePriceEl = $("bkBasePrice");
+    const dateLabel = $("bkDateLabel");
+    const guestsRow = $("bkGuestsRow");
+    const guestsPriceEl = $("bkGuestsPrice");
+    const serviceRow = $("bkServiceRow");
+    const servicePriceEl = $("bkServicePrice");
+    const totalEl = $("bkTotal");
+    const dayHint = $("bkDayHint");
+    
     if (!houseLabel) return 0;
+    
     const h = CONFIG.houses[state.house];
     houseLabel.textContent = h.name;
+    
     if (!state.date) {
-      if (basePriceEl) basePriceEl.textContent = "—";
-      if (totalEl) totalEl.textContent = "0 Br";
+      if (basePriceEl) basePriceEl.textContent = "—"; 
+      if (totalEl) totalEl.textContent = "0 Br"; 
       if (dateLabel) dateLabel.textContent = "—";
       if (dayHint) { dayHint.textContent = "Выберите дату"; dayHint.className = "bk-hint"; }
       return 0;
     }
+    
     const d = new Date(state.date + "T12:00:00");
     const day = d.getDay();
     const isWeekend = day === 0 || day === 6;
     const base = isWeekend ? h.priceWeekend : h.priceWeekday;
     const guestsExtra = Math.max(0, state.guests - CONFIG.baseGuests) * CONFIG.guestExtra;
     const total = base + guestsExtra + state.servicePrice;
+    
     const money = (n) => n.toLocaleString("ru-RU") + " Br";
+    
     if (basePriceEl) basePriceEl.textContent = money(base);
     if (dateLabel) dateLabel.textContent = d.toLocaleDateString("ru-RU", { day: 'numeric', month: 'long' });
-    if (state.guests > CONFIG.baseGuests) { if (guestsRow) guestsRow.style.display = "flex"; if (guestsPriceEl) guestsPriceEl.textContent = money(guestsExtra); } else { if (guestsRow) guestsRow.style.display = "none"; }
-    if (state.servicePrice > 0) { if (serviceRow) serviceRow.style.display = "flex"; if (servicePriceEl) servicePriceEl.textContent = money(state.servicePrice); } else { if (serviceRow) serviceRow.style.display = "none"; }
+    
+    if (state.guests > CONFIG.baseGuests) { 
+      if (guestsRow) guestsRow.style.display = "flex"; 
+      if (guestsPriceEl) guestsPriceEl.textContent = money(guestsExtra); 
+    } else { 
+      if (guestsRow) guestsRow.style.display = "none"; 
+    }
+    
+    if (state.servicePrice > 0) { 
+      if (serviceRow) serviceRow.style.display = "flex"; 
+      if (servicePriceEl) servicePriceEl.textContent = money(state.servicePrice); 
+    } else { 
+      if (serviceRow) serviceRow.style.display = "none"; 
+    }
+    
     if (totalEl) totalEl.textContent = money(total);
-    if (dayHint) { dayHint.textContent = `🗓 ${d.toLocaleDateString("ru-RU")} — ${isWeekend ? "выходной" : "будний"}`; dayHint.className = "bk-hint " + (isWeekend ? "weekend" : "weekday"); }
+    
+    if (dayHint) {
+      dayHint.textContent = `🗓 ${d.toLocaleDateString("ru-RU")} — ${isWeekend ? "выходной" : "будний"}`;
+      dayHint.className = "bk-hint " + (isWeekend ? "weekend" : "weekday");
+    }
     return total;
   }
+
   function updateProgress() {
-    const steps = document.querySelectorAll(".progress-step");
-    const line1 = $("line1"), line2 = $("line2");
-    if (!steps.length) return;
-    steps.forEach(s => s.classList.remove("active", "done"));
-    if (line1) line1.classList.remove("done"); if (line2) line2.classList.remove("done");
-    if (state.date) { steps[0].classList.add("done"); steps[1].classList.add("done"); steps[2].classList.add("active"); if (line1) line1.classList.add("done"); if (line2) line2.classList.add("done"); }
-    else if (state.house) { steps[0].classList.add("done"); steps[1].classList.add("active"); if (line1) line1.classList.add("done"); }
-    else { steps[0].classList.add("active"); }
+    const progressSteps = document.querySelectorAll(".progress-step");
+    const line1 = $("line1");
+    const line2 = $("line2");
+    if (!progressSteps.length) return;
+    
+    const hasHouse = !!state.house;
+    const hasDate = !!state.date;
+    
+    progressSteps.forEach(s => s.classList.remove("active", "done"));
+    if (line1) line1.classList.remove("done");
+    if (line2) line2.classList.remove("done");
+    
+    if (hasDate) {
+      progressSteps[0].classList.add("done"); 
+      progressSteps[1].classList.add("done"); 
+      progressSteps[2].classList.add("active");
+      if (line1) line1.classList.add("done"); 
+      if (line2) line2.classList.add("done");
+    } else if (hasHouse) {
+      progressSteps[0].classList.add("done"); 
+      progressSteps[1].classList.add("active");
+      if (line1) line1.classList.add("done");
+    } else { 
+      progressSteps[0].classList.add("active"); 
+    }
   }
+
   const form = $("bkForm");
   if (form) {
     form.onsubmit = async function(e) {
       e.preventDefault();
+      
       if (isSubmitting) return;
-      const nameInput = $("bkName"), phoneInput = $("bkPhone"), agreeCheck = $("agreeCheck"), agreeBox = $("agreeBox");
+      if ($("hpWebsite") && $("hpWebsite").value) { return; }
+      
+      const nameInput = $("bkName");
+      const phoneInput = $("bkPhone");
+      const agreeCheck = $("agreeCheck");
+      const agreeBox = $("agreeBox");
+      
       if (!state.date) { showToast("Выберите дату!", "error"); return; }
-      if (!nameInput.value.trim()) { showToast("Введите имя!", "error"); nameInput.classList.add("error"); nameInput.focus(); return; }
-      if (!phoneInput.value.trim()) { showToast("Введите телефон!", "error"); phoneInput.classList.add("error"); phoneInput.focus(); return; }
-      if (!agreeCheck.checked) { agreeBox.classList.add("error"); showToast("Согласитесь с правилами!", "error"); return; }
-      if (isBooked(state.house, state.date)) { showToast("Эта дата уже занята! Выберите другую.", "error"); state.date = ""; renderCalendar(); recalc(); updateProgress(); return; }
+      if (!nameInput.value.trim()) { 
+        showToast("Введите имя!", "error"); 
+        nameInput.classList.add("error");
+        nameInput.focus();
+        return; 
+      }
+      if (!phoneInput.value.trim()) { 
+        showToast("Введите телефон!", "error"); 
+        phoneInput.classList.add("error");
+        phoneInput.focus();
+        return; 
+      }
+      if (!agreeCheck.checked) { 
+        agreeBox.classList.add("error");
+        showToast("Поставьте галочку согласия с правилами!", "error"); 
+        return; 
+      }
+
+      if (isBooked(state.house, state.date)) {
+        showToast("Эта дата только что забронировали! Выберите другую.", "error");
+        state.date = "";
+        renderCalendar();
+        recalc();
+        updateProgress();
+        return;
+      }
+
       isSubmitting = true;
-      const btn = $("bkSubmit"); const originalText = btn.textContent;
-      btn.textContent = "⏳ Отправка..."; btn.disabled = true;
+      const btn = $("bkSubmit");
+      const originalText = btn.textContent;
+      btn.textContent = "⏳ Отправка...";
+      btn.disabled = true;
+
       const fd = new URLSearchParams();
-      fd.append("date", state.date); fd.append("house", state.house);
-      fd.append("name", nameInput.value.trim()); fd.append("phone", phoneInput.value.trim());
-      fd.append("instagram", $("bkInsta").value || ""); fd.append("guests", state.guests);
-      fd.append("serviceLabel", state.service); fd.append("total", $("bkTotal").textContent.replace(/[^\d]/g, ""));
+      fd.append("date", state.date);
+      fd.append("house", state.house);
+      fd.append("name", nameInput.value.trim());
+      fd.append("phone", phoneInput.value.trim());
+      fd.append("instagram", $("bkInsta").value || "");
+      fd.append("guests", state.guests);
+      fd.append("serviceLabel", state.service);
+      fd.append("total", $("bkTotal").textContent.replace(/[^\d]/g, ""));
+
       try {
-        const res = await fetch(CONFIG.submitUrl, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: fd.toString() });
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        let data; try { data = await res.json(); } catch(e) { data = { ok: true }; }
+        const res = await fetch(CONFIG.submitUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: fd.toString()
+        });
+
+        if (!res.ok) throw new Error("Сервер вернул ошибку: " + res.status);
+
+        let data;
+        try {
+          data = await res.json();
+        } catch (jsonErr) {
+          console.warn("Ответ не JSON, считаем успешным");
+          data = { ok: true };
+        }
+
         if (data && data.ok === true) {
           showToast("✅ Заявка отправлена! Внесите предоплату 100 Br. Мы свяжемся с вами.", "success");
+          showPayBlock();
+          
           if (!bookedCache[state.house]) bookedCache[state.house] = [];
-          if (bookedCache[state.house].indexOf(state.date) === -1) bookedCache[state.house].push(state.date);
-          form.reset(); agreeCheck.checked = false; agreeBox.classList.remove("error");
-          nameInput.classList.remove("error"); phoneInput.classList.remove("error"); state.date = "";
-          renderCalendar(); recalc(); updateProgress();
+          if (bookedCache[state.house].indexOf(state.date) === -1) {
+            bookedCache[state.house].push(state.date);
+          }
+          
+          form.reset();
+          agreeCheck.checked = false;
+          agreeBox.classList.remove("error");
+          nameInput.classList.remove("error");
+          phoneInput.classList.remove("error");
+          state.date = "";
+          
+          renderCalendar();
+          recalc();
+          updateProgress();
+
           loadBookings().then(() => renderCalendar());
-        } else { showToast("❌ " + (data?.error || "Ошибка отправки"), "error"); }
+
+        } else {
+          const errMsg = (data && data.error) ? data.error : "Не удалось отправить заявку";
+          showToast("❌ " + errMsg, "error");
+        }
+
       } catch (err) {
-        console.error("Ошибка:", err);
+        console.error("Ошибка отправки:", err);
+        
         try {
-          await fetch(CONFIG.submitUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: fd.toString() });
+          await fetch(CONFIG.submitUrl, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: fd.toString()
+          });
+          
           showToast("✅ Заявка отправлена! Внесите предоплату 100 Br. Мы свяжемся с вами.", "success");
+          showPayBlock();
+          
           if (!bookedCache[state.house]) bookedCache[state.house] = [];
-          if (bookedCache[state.house].indexOf(fd.get("date")) === -1) bookedCache[state.house].push(fd.get("date"));
-          form.reset(); agreeCheck.checked = false; agreeBox.classList.remove("error"); state.date = "";
-          renderCalendar(); recalc(); updateProgress();
+          if (bookedCache[state.house].indexOf(fd.get("date")) === -1) {
+            bookedCache[state.house].push(fd.get("date"));
+          }
+          
+          form.reset();
+          agreeCheck.checked = false;
+          agreeBox.classList.remove("error");
+          state.date = "";
+          
+          renderCalendar();
+          recalc();
+          updateProgress();
           loadBookings().then(() => renderCalendar());
-        } catch(e) { showToast("❌ Ошибка. Проверьте интернет.", "error"); }
-      } finally { isSubmitting = false; btn.textContent = originalText; btn.disabled = false; }
+          
+        } catch (err2) {
+          showToast("❌ Ошибка отправки. Проверьте интернет и попробуйте снова.", "error");
+        }
+      } finally {
+        isSubmitting = false;
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }
     };
   }
-  const rulesHeader = $("rulesHeader"), rulesBlock = $("rulesBlock");
-  if (rulesHeader && rulesBlock) rulesHeader.onclick = function() { rulesBlock.classList.toggle("open"); };
+
+  const rulesHeader = $("rulesHeader");
+  const rulesBlock = $("rulesBlock");
+  if (rulesHeader && rulesBlock) {
+    rulesHeader.onclick = function() {
+      rulesBlock.classList.toggle("open");
+    };
+  }
+
   const stickyBook = $("stickyBook");
-  if (stickyBook) stickyBook.onclick = function() { document.getElementById("booking-screen").scrollIntoView({ behavior: 'smooth' }); };
+  if (stickyBook) {
+    stickyBook.onclick = function() {
+      document.getElementById("booking-screen").scrollIntoView({ behavior: 'smooth' });
+    };
+  }
+
   document.querySelectorAll("[data-slideshow]").forEach(function(slideshow) {
-    const slides = slideshow.querySelectorAll(".hs-slide"), dots = slideshow.querySelectorAll(".hs-dot");
+    const slides = slideshow.querySelectorAll(".hs-slide");
+    const dots = slideshow.querySelectorAll(".hs-dot");
     if (slides.length <= 1) return;
     let idx = 0;
     setInterval(function() {
-      slides[idx].classList.remove("active"); if (dots[idx]) dots[idx].classList.remove("active");
+      slides[idx].classList.remove("active");
+      if (dots[idx]) dots[idx].classList.remove("active");
       idx = (idx + 1) % slides.length;
-      slides[idx].classList.add("active"); if (dots[idx]) dots[idx].classList.add("active");
+      slides[idx].classList.add("active");
+      if (dots[idx]) dots[idx].classList.add("active");
     }, 4000);
   });
+
   (function() {
-    const preview = $("service-preview"); if (!preview) return;
-    const slides = preview.querySelectorAll(".sp-slide"), dotsContainer = $("spDots");
+    const preview = $("service-preview");
+    if (!preview) return;
+    const slides = preview.querySelectorAll(".sp-slide");
+    const dotsContainer = $("spDots");
     if (!slides.length || !dotsContainer) return;
-    let idx = 0, timer = null;
+    
+    let idx = 0;
+    let timer = null;
+    
     dotsContainer.innerHTML = "";
-    slides.forEach((_, i) => { const dot = document.createElement("span"); dot.className = "sp-dot" + (i === 0 ? " active" : ""); dotsContainer.appendChild(dot); });
+    slides.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.className = "sp-dot" + (i === 0 ? " active" : "");
+      dotsContainer.appendChild(dot);
+    });
     const dots = dotsContainer.querySelectorAll(".sp-dot");
+    
+    function showSlide(i) {
+      slides.forEach((s, j) => s.classList.toggle("active", j === i));
+      dots.forEach((d, j) => d.classList.toggle("active", j === i));
+      idx = i;
+    }
+    
+    function stopSlideshow() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+    
     document.querySelectorAll(".bk-serv").forEach(serv => {
       serv.addEventListener("click", function() {
-        const sn = this.getAttribute("data-service");
-        if (timer) { clearInterval(timer); timer = null; }
-        if (sn === "none") { preview.classList.remove("active"); return; }
+        const serviceName = this.getAttribute("data-service");
+        stopSlideshow();
+        
+        if (serviceName === "none") {
+          preview.classList.remove("active");
+          return;
+        }
+        
         preview.classList.add("active");
-        const filtered = [], filteredIdx = [];
-        slides.forEach((s, i) => { if (s.getAttribute("data-service-img") === sn) { filtered.push(s); filteredIdx.push(i); } });
-        slides.forEach(s => s.classList.remove("active")); dots.forEach(d => d.classList.remove("active"));
+        
+        const filtered = [];
+        const filteredIdx = [];
+        slides.forEach((s, i) => {
+          if (s.getAttribute("data-service-img") === serviceName) {
+            filtered.push(s);
+            filteredIdx.push(i);
+          }
+        });
+        
+        slides.forEach(s => s.classList.remove("active"));
+        dots.forEach(d => d.classList.remove("active"));
+        
         if (filtered.length > 0) {
-          filtered[0].classList.add("active"); dots[filteredIdx[0]]?.classList.add("active"); idx = filteredIdx[0];
-          let li = 0;
+          filtered[0].classList.add("active");
+          dots[filteredIdx[0]]?.classList.add("active");
+          idx = filteredIdx[0];
+          
+          let localIdx = 0;
           timer = setInterval(() => {
-            filtered.forEach(s => s.classList.remove("active")); dots.forEach(d => d.classList.remove("active"));
-            li = (li + 1) % filtered.length;
-            filtered[li].classList.add("active"); dots[filteredIdx[li]]?.classList.add("active");
+            filtered.forEach(s => s.classList.remove("active"));
+            dots.forEach(d => d.classList.remove("active"));
+            localIdx = (localIdx + 1) % filtered.length;
+            filtered[localIdx].classList.add("active");
+            dots[filteredIdx[localIdx]]?.classList.add("active");
           }, 3000);
         }
       });
     });
   })();
+
   (function() {
-    const container = $("heroStars"); if (!container) return;
+    const container = $("heroStars");
+    if (!container) return;
     for (let i = 0; i < 40; i++) {
-      const star = document.createElement("div"); star.className = "star";
-      star.style.left = Math.random() * 100 + "%"; star.style.top = Math.random() * 100 + "%";
-      star.style.animationDelay = Math.random() * 5 + "s"; container.appendChild(star);
+      const star = document.createElement("div");
+      star.className = "star";
+      star.style.left = Math.random() * 100 + "%";
+      star.style.top = Math.random() * 100 + "%";
+      star.style.animationDelay = Math.random() * 5 + "s";
+      container.appendChild(star);
     }
   })();
-  renderCalendar(); recalc(); updateProgress();
-  loadBookings().then(() => renderCalendar());
+
+  (function() {
+    var track = document.querySelector('.gs-track');
+    var dotsWrap = document.getElementById('gsDots');
+    if (!track || !dotsWrap) return;
+    var cards = track.querySelectorAll('.gs-card');
+    for (var i = 0; i < cards.length; i++) {
+      var d = document.createElement('span');
+      d.className = 'gs-dot' + (i === 0 ? ' active' : '');
+      dotsWrap.appendChild(d);
+    }
+    var dots = dotsWrap.querySelectorAll('.gs-dot');
+    var ticking = false;
+    track.addEventListener('scroll', function() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function() {
+        var card = track.querySelector('.gs-card');
+        var step = card ? card.offsetWidth + 14 : 1;
+        var idx = Math.round(track.scrollLeft / step);
+        if (idx < 0) idx = 0;
+        if (idx >= dots.length) idx = dots.length - 1;
+        for (var j = 0; j < dots.length; j++) dots[j].classList.toggle('active', j === idx);
+        ticking = false;
+      });
+    }, { passive: true });
+  })();
+
+  renderCalendar();
+  recalc();
+  updateProgress();
+
+  loadBookings().then(() => {
+    console.log("Занятые даты загружены:", bookedCache);
+    renderCalendar();
+  });
+
+  setInterval(async () => {
+    var oldBooked = JSON.stringify(bookedCache);
+    await loadBookings();
+    if (JSON.stringify(bookedCache) !== oldBooked) {
+      renderCalendar();
+      console.log("Календарь обновлён — появились новые брони");
+    }
+  }, 30000);
+
 })();
 </script>
 </body>
