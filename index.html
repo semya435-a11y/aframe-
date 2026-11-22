@@ -9,7 +9,7 @@
 <meta property="og:site_name" content="Aframe_chenki">
 <meta property="og:title" content="Aframe_chenki — треугольные домики в 3 км от Гомеля">
 <meta property="og:description" content="А-фрейм домики, баня, купель, зона барбекю. От 300 Br за ночь. Бронирование онлайн.">
-<meta property="og:image" content="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/сам-домик-на-заглавную.png">
+<meta property="og:image" content="https://aframe-chenki.by/iloveimg-resized/сам-домик-на-заглавную.png">
 <meta property="og:url" content="https://aframe-chenki.by/">
 <meta name="twitter:card" content="summary_large_image">
 <style>
@@ -19,7 +19,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{background:#0a0f0a;color:#e8e4dc;overflow-x:hidden;line-height:1.5}
 .screen{position:relative;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 16px}
 #hero{text-align:center;overflow:hidden;padding:20px}
-.hero-bg{position:absolute;inset:0;background:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/сам-домик-на-заглавную.png') center/cover no-repeat;filter:brightness(.8) saturate(1.08);animation:zoom 22s ease-in-out infinite alternate}
+.hero-bg{position:absolute;inset:0;background-image:url('/iloveimg-resized/сам-домик-на-заглавную.png'),url('/iloveimg-resized/iloveimg-resized-2/сам-домик-на-заглавную.png'),url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/сам-домик-на-заглавную.png');background-position:center;background-size:cover;background-repeat:no-repeat;filter:brightness(.8) saturate(1.08);animation:zoom 22s ease-in-out infinite alternate}
 @keyframes zoom{from{transform:scale(1)}to{transform:scale(1.12)}}
 .hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,15,10,.6),rgba(10,15,10,.75) 50%,rgba(10,15,10,.97))}
 .hero-in{position:relative;z-index:3;max-width:900px;padding:0 16px;animation:up 1.6s cubic-bezier(.2,.8,.2,1)}
@@ -52,7 +52,7 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 .house-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px}
 .house-card{position:relative;border-radius:20px;overflow:hidden;cursor:pointer;background:rgba(20,30,20,.88);border:2px solid rgba(200,220,180,.12);text-align:left;font-family:inherit;color:#e8e4dc;padding:0;box-shadow:0 15px 40px rgba(0,0,0,.4);transition:.25s}
 .house-card.active{border-color:#d4af6a;box-shadow:0 0 0 4px rgba(212,175,106,.15),0 20px 50px rgba(0,0,0,.6)}
-.hs-img{position:relative;width:100%;aspect-ratio:16/10;background-size:cover;background-position:center;filter:brightness(.88)}
+.hs-img{position:relative;width:100%;aspect-ratio:16/10;background-position:center;background-size:cover;filter:brightness(.88)}
 .hs-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,15,10,.95),transparent 50%)}
 .hs-badge{position:absolute;top:12px;left:12px;background:rgba(10,15,10,.85);color:#d4af6a;padding:5px 10px;border-radius:8px;font-size:9px;font-weight:900;letter-spacing:2px;text-transform:uppercase;border:1px solid rgba(212,175,106,.4);z-index:2}
 .hs-check{position:absolute;top:12px;right:12px;width:28px;height:28px;border-radius:50%;background:#d4af6a;color:#0a0f0a;display:none;align-items:center;justify-content:center;font-weight:900;z-index:2}
@@ -164,20 +164,20 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 <section class="screen" id="gallery">
   <div class="g-title"><h2>Галерея</h2><p>Наши домики</p></div>
   <div class="g-track">
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/в домике 1.png"><span class="g-tag">Домик №1</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/в домике 1 вид.png"><span class="g-tag">Домик №1</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/в домике 1 туалет.png"><span class="g-tag">Домик №1</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/сам-домик-на-заглавную.png"><span class="g-tag">Домик №1</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/домик-баня-2.png"><span class="g-tag">Домик №1</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/домик-баня-а.png"><span class="g-tag">Домик №1</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/улица-домик-2.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/улица-зона-отдыха-домик-2.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/домие-баня-вход.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/купель.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/купель-и-баня-домик-2.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/баня-домик-2.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/барбекю-домик-номер-2.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/2026-11-20 16.18.58.jpeg"><span class="g-tag">Домик №2</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="/iloveimg-resized/в домике 1.png" data-base="в домике 1.png"><span class="g-tag">Домик №1</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="/iloveimg-resized/в домике 1 вид.png" data-base="в домике 1 вид.png"><span class="g-tag">Домик №1</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="/iloveimg-resized/в домике 1 туалет.png" data-base="в домике 1 туалет.png"><span class="g-tag">Домик №1</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="/iloveimg-resized/сам-домик-на-заглавную.png" data-base="сам-домик-на-заглавную.png"><span class="g-tag">Домик №1</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="/iloveimg-resized/домик-баня-2.png" data-base="домик-баня-2.png"><span class="g-tag">Домик №1</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="/iloveimg-resized/домик-баня-а.png" data-base="домик-баня-а.png"><span class="g-tag">Домик №1</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/улица-домик-2.png" data-base="улица-домик-2.png"><span class="g-tag">Домик №2</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/улица-зона-отдыха-домик-2.png" data-base="улица-зона-отдыха-домик-2.png"><span class="g-tag">Домик №2</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/домие-баня-вход.png" data-base="домие-баня-вход.png"><span class="g-tag">Домик №2</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/купель.png" data-base="купель.png"><span class="g-tag">Домик №2</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/купель-и-баня-домик-2.png" data-base="купель-и-баня-домик-2.png"><span class="g-tag">Домик №2</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/баня-домик-2.png" data-base="баня-домик-2.png"><span class="g-tag">Домик №2</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/барбекю-домик-номер-2.png" data-base="барбекю-домик-номер-2.png"><span class="g-tag">Домик №2</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/2026-11-20 16.18.58.jpeg" data-base="2026-11-20 16.18.58.jpeg"><span class="g-tag">Домик №2</span></div>
   </div>
 </section>
 <section class="screen" id="booking">
@@ -192,7 +192,7 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 
     <div class="house-grid">
       <button type="button" class="house-card active" data-house="1">
-        <div class="hs-img" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/в домике 1.png')">
+        <div class="hs-img" style="background-image:url('/iloveimg-resized/в домике 1.png'),url('/iloveimg-resized/iloveimg-resized-2/в домике 1.png'),url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/в домике 1.png')">
           <span class="hs-badge">◆ Домик №1</span><span class="hs-check">✓</span>
         </div>
         <div class="hs-info">
@@ -202,7 +202,7 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
         </div>
       </button>
       <button type="button" class="house-card" data-house="2">
-        <div class="hs-img" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/улица-домик-2.png')">
+        <div class="hs-img" style="background-image:url('/iloveimg-resized/улица-домик-2.png'),url('/iloveimg-resized/iloveimg-resized-2/улица-домик-2.png'),url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/улица-домик-2.png')">
           <span class="hs-badge">◆ Домик №2</span><span class="hs-check">✓</span>
           <span class="hs-video" data-video="IjMnJZ8kI78">▶ Видео о домике</span>
         </div>
@@ -306,6 +306,7 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 (function(){
   var API="https://script.google.com/macros/s/AKfycbx64AsrgtgLiqjV3cshq4VaerEzf_zMOMDPNtvS7BUhTlQWi2QWOY_TXgrTaNb9gFq2/exec";
   var BOT="aframe_chenki_bot";
+  var RAW="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/";
   var state={house:"1",date:"",guests:2,service:"none",servicePrice:0};
   var viewDate=new Date();
   var booked={"1":[],"2":[]};
@@ -320,6 +321,12 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 
   document.querySelectorAll("img.g-photo").forEach(function(img){
     img.addEventListener("error",function(){
+      var step=parseInt(img.getAttribute("data-step")||"0",10);
+      var base=img.getAttribute("data-base");
+      var next="";
+      if(step===0)next="/iloveimg-resized/iloveimg-resized-2/"+base;
+      else if(step===1)next=RAW+base;
+      if(next){img.setAttribute("data-step",step+1);img.src=next;return;}
       var card=img.closest(".g-card");
       if(card)card.style.display="none";
     });
