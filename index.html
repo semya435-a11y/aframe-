@@ -37,10 +37,17 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 .g-title p{font-size:10px;letter-spacing:4px;color:#8a9080;text-transform:uppercase;margin-top:6px}
 .g-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 14px;scrollbar-width:none;width:100%;align-self:stretch}
 .g-track::-webkit-scrollbar{display:none}
-.g-card{flex:0 0 auto;width:min(68vw,250px);height:min(52vh,320px);scroll-snap-align:center;position:relative;border-radius:16px;overflow:hidden;background:#0d1410;border:1px solid rgba(200,220,180,.12);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+.g-card{flex:0 0 auto;width:min(68vw,250px);height:min(52vh,320px);scroll-snap-align:center;position:relative;border-radius:16px;overflow:hidden;background:#0d1410;border:1px solid rgba(200,220,180,.12);box-shadow:0 12px 30px rgba(0,0,0,.45);cursor:zoom-in}
 .g-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.g-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,15,10,.5),transparent 45%);pointer-events:none}
-.g-tag{position:absolute;top:10px;left:10px;z-index:2;display:inline-block;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#d4af6a;background:rgba(10,15,10,.85);padding:5px 10px;border-radius:20px;border:1px solid rgba(212,175,106,.4)}
+.g-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,15,10,.35),transparent 45%);pointer-events:none}
+.lb{display:none;position:fixed;inset:0;z-index:100002;background:rgba(0,0,0,.97);align-items:center;justify-content:center;padding:58px 10px}
+.lb.show{display:flex}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;display:block;border-radius:6px}
+.lb-nav{position:fixed;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:100003;font-family:inherit}
+.lb-prev{left:10px}
+.lb-next{right:10px}
+.lb-close{position:fixed;top:14px;right:14px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:20px;line-height:1;cursor:pointer;z-index:100003;display:flex;align-items:center;justify-content:center;font-family:inherit}
+.lb-count{position:fixed;top:22px;left:50%;transform:translateX(-50%);color:#d4af6a;font-size:13px;font-weight:700;letter-spacing:1px;z-index:100003}
 #booking{background:linear-gradient(180deg,#0a0f0a,#0d1410 50%,#0a0f0a);padding:50px 16px 120px}
 .b-head{text-align:center;margin-bottom:20px}
 .b-head h2{font-size:clamp(1.5rem,6vw,2.2rem);font-weight:900;text-transform:uppercase;letter-spacing:-1px;background:linear-gradient(to right,#f0ede6 30%,#d4af6a);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -164,20 +171,20 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 <section class="screen" id="gallery">
   <div class="g-title"><h2>Галерея</h2><p>Наши домики</p></div>
   <div class="g-track">
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="/iloveimg-resized/в домике 1.png" data-base="в домике 1.png"><span class="g-tag">Домик №1</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="/iloveimg-resized/в домике 1 вид.png" data-base="в домике 1 вид.png"><span class="g-tag">Домик №1</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="/iloveimg-resized/в домике 1 туалет.png" data-base="в домике 1 туалет.png"><span class="g-tag">Домик №1</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="/iloveimg-resized/сам-домик-на-заглавную.png" data-base="сам-домик-на-заглавную.png"><span class="g-tag">Домик №1</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="/iloveimg-resized/домик-баня-2.png" data-base="домик-баня-2.png"><span class="g-tag">Домик №1</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №1" src="/iloveimg-resized/домик-баня-а.png" data-base="домик-баня-а.png"><span class="g-tag">Домик №1</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/улица-домик-2.png" data-base="улица-домик-2.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/улица-зона-отдыха-домик-2.png" data-base="улица-зона-отдыха-домик-2.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/домие-баня-вход.png" data-base="домие-баня-вход.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/купель.png" data-base="купель.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/купель-и-баня-домик-2.png" data-base="купель-и-баня-домик-2.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/баня-домик-2.png" data-base="баня-домик-2.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/барбекю-домик-номер-2.png" data-base="барбекю-домик-номер-2.png"><span class="g-tag">Домик №2</span></div>
-    <div class="g-card"><img class="g-photo" loading="lazy" alt="Домик №2" src="/iloveimg-resized/2026-11-20 16.18.58.jpeg" data-base="2026-11-20 16.18.58.jpeg"><span class="g-tag">Домик №2</span></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/в домике 1.png" data-base="в домике 1.png"></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/в домике 1 вид.png" data-base="в домике 1 вид.png"></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/в домике 1 туалет.png" data-base="в домике 1 туалет.png"></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/сам-домик-на-заглавную.png" data-base="сам-домик-на-заглавную.png"></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/домик-баня-2.png" data-base="домик-баня-2.png"></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/домик-баня-а.png" data-base="домик-баня-а.png"></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/улица-домик-2.png" data-base="улица-домик-2.png"></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/улица-зона-отдыха-домик-2.png" data-base="улица-зона-отдыха-домик-2.png"></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/домие-баня-вход.png" data-base="домие-баня-вход.png"></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/купель.png" data-base="купель.png"></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/купель-и-баня-домик-2.png" data-base="купель-и-баня-домик-2.png"></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/баня-домик-2.png" data-base="баня-домик-2.png"></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/барбекю-домик-номер-2.png" data-base="барбекю-домик-номер-2.png"></div>
+    <div class="g-card"><img class="g-photo" loading="lazy" alt="Фото" src="/iloveimg-resized/2026-11-20 16.18.58.jpeg" data-base="2026-11-20 16.18.58.jpeg"></div>
   </div>
 </section>
 <section class="screen" id="booking">
@@ -302,6 +309,14 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
   </div>
 </div>
 
+<div class="lb" id="lightbox">
+  <div class="lb-count" id="lbCount">1 / 1</div>
+  <button type="button" class="lb-close" id="lbClose">✕</button>
+  <button type="button" class="lb-nav lb-prev" id="lbPrev">‹</button>
+  <button type="button" class="lb-nav lb-next" id="lbNext">›</button>
+  <img id="lbImg" alt="Фото">
+</div>
+
 <script>
 (function(){
   var API="https://script.google.com/macros/s/AKfycbx64AsrgtgLiqjV3cshq4VaerEzf_zMOMDPNtvS7BUhTlQWi2QWOY_TXgrTaNb9gFq2/exec";
@@ -330,6 +345,61 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
       var card=img.closest(".g-card");
       if(card)card.style.display="none";
     });
+  });
+
+  var lb=$("lightbox"),lbImg=$("lbImg"),lbCount=$("lbCount");
+  var lbList=[],lbIdx=0;
+
+  function lbBuild(){
+    lbList=[];
+    document.querySelectorAll(".g-card").forEach(function(card){
+      if(card.style.display==="none")return;
+      var img=card.querySelector("img.g-photo");
+      if(img&&img.naturalWidth>0)lbList.push(img.currentSrc||img.src);
+    });
+  }
+  function lbShow(){
+    if(!lbList.length)return;
+    lbImg.src=lbList[lbIdx];
+    lbCount.textContent=(lbIdx+1)+" / "+lbList.length;
+  }
+  function lbOpen(src){
+    lbBuild();
+    if(!lbList.length)return;
+    var i=lbList.indexOf(src);
+    lbIdx=i<0?0:i;
+    lbShow();
+    lb.classList.add("show");
+    document.body.style.overflow="hidden";
+  }
+  function lbNext(){if(!lbList.length)return;lbIdx=(lbIdx+1)%lbList.length;lbShow();}
+  function lbPrev(){if(!lbList.length)return;lbIdx=(lbIdx-1+lbList.length)%lbList.length;lbShow();}
+  function lbClose(){lb.classList.remove("show");lbImg.src="";document.body.style.overflow="";}
+
+  document.querySelectorAll(".g-card").forEach(function(card){
+    card.addEventListener("click",function(){
+      var img=card.querySelector("img.g-photo");
+      if(!img)return;
+      lbOpen(img.currentSrc||img.src);
+    });
+  });
+  $("lbClose").onclick=lbClose;
+  $("lbNext").onclick=lbNext;
+  $("lbPrev").onclick=lbPrev;
+  lb.addEventListener("click",function(e){if(e.target===lb||e.target===lbImg)lbClose();});
+
+  var lbTouchX=0;
+  lb.addEventListener("touchstart",function(e){lbTouchX=e.changedTouches[0].clientX;},{passive:true});
+  lb.addEventListener("touchend",function(e){
+    var dx=e.changedTouches[0].clientX-lbTouchX;
+    if(Math.abs(dx)>50){if(dx<0)lbNext();else lbPrev();}
+  },{passive:true});
+
+  document.addEventListener("keydown",function(e){
+    if(!lb.classList.contains("show"))return;
+    if(e.key==="Escape")lbClose();
+    else if(e.key==="ArrowRight")lbNext();
+    else if(e.key==="ArrowLeft")lbPrev();
   });
 
   function toast(msg){
