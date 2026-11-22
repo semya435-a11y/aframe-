@@ -9,18 +9,17 @@
 <meta property="og:site_name" content="Aframe_chenki">
 <meta property="og:title" content="Aframe_chenki — треугольные домики в 3 км от Гомеля">
 <meta property="og:description" content="А-фрейм домики, баня, купель, зона барбекю. От 300 Br за ночь. Бронирование онлайн.">
-<meta property="og:image" content="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/сам-домик-на-заглавную.png">
-<meta property="og:url" content="https://semya435-a11y.github.io/aframe-/">
+<meta property="og:image" content="https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/samdomiknazaglavnyu.jpg">
+<meta property="og:url" content="https://aframe-chenki.by/">
 <meta name="twitter:card" content="summary_large_image">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap');
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{background:#0a0f0a;color:#e8e4dc;overflow-x:hidden;line-height:1.5}
-img{max-width:100%;display:block}
 .screen{position:relative;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 16px}
 #hero{text-align:center;overflow:hidden;padding:20px}
-.hero-bg{position:absolute;inset:0;background:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/сам-домик-на-заглавную.png') center/cover no-repeat;filter:brightness(.8) saturate(1.08);animation:zoom 22s ease-in-out infinite alternate}
+.hero-bg{position:absolute;inset:0;background:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/samdomiknazaglavnyu.jpg') center/cover no-repeat;filter:brightness(.8) saturate(1.08);animation:zoom 22s ease-in-out infinite alternate}
 @keyframes zoom{from{transform:scale(1)}to{transform:scale(1.12)}}
 .hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,15,10,.6),rgba(10,15,10,.75) 50%,rgba(10,15,10,.97))}
 .hero-in{position:relative;z-index:3;max-width:900px;padding:0 16px;animation:up 1.6s cubic-bezier(.2,.8,.2,1)}
@@ -29,14 +28,14 @@ img{max-width:100%;display:block}
 h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;letter-spacing:-1px;line-height:.95;margin-bottom:20px;background:linear-gradient(to right,#f0ede6 25%,#d4af6a 90%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero-sub{font-size:clamp(.9rem,3.5vw,1.15rem);color:#c0bbb0;font-weight:300;letter-spacing:1px;max-width:560px;margin:0 auto 32px}
 .btn-gold{display:inline-block;padding:17px 42px;background:linear-gradient(135deg,#d4af6a,#b8945a);color:#1a1508;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:2px;border:none;border-radius:50px;cursor:pointer;text-decoration:none;box-shadow:0 15px 40px rgba(212,175,106,.35);font-family:inherit}
-.btn-ghost{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:13px 26px;background:rgba(200,184,138,.1);border:1px solid rgba(200,184,138,.5);border-radius:50px;color:#d4af6a;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:13px 26px;background:rgba(200,184,138,.1);border:1px solid rgba(200,184,138,.5);border-radius:50px;color:#d4af6a;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;cursor:pointer}
 .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#c8b88a;font-size:10px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;z-index:3;animation:bob 2.6s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0);opacity:.6}50%{transform:translateX(-50%) translateY(8px);opacity:1}}
-#gallery{padding:60px 0 40px;justify-content:flex-start;min-height:auto;background:radial-gradient(ellipse at center,#101a12,#0a0f0a 70%)}
+#gallery{padding:60px 0 40px;justify-content:flex-start;align-items:stretch;min-height:auto;background:radial-gradient(ellipse at center,#101a12,#0a0f0a 70%)}
 .g-title{text-align:center;margin-bottom:24px;padding:0 20px}
 .g-title h2{font-size:clamp(1.5rem,6vw,2.4rem);font-weight:900;text-transform:uppercase;letter-spacing:-1px;background:linear-gradient(to right,#f0ede6 30%,#d4af6a);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .g-title p{font-size:10px;letter-spacing:4px;color:#8a9080;text-transform:uppercase;margin-top:6px}
-.g-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px;scrollbar-width:none}
+.g-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px;scrollbar-width:none;width:100%;align-self:stretch}
 .g-track::-webkit-scrollbar{display:none}
 .g-card{flex:0 0 82%;scroll-snap-align:center;position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#0d1410;border:1px solid rgba(200,220,180,.12);box-shadow:0 18px 44px rgba(0,0,0,.5)}
 .g-photo{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.9)}
@@ -53,7 +52,7 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 .ph-item{display:flex;align-items:center;gap:6px;font-size:12px}
 .ph-item .lbl{color:#c0bbb0}
 .ph-item .val{color:#d4af6a;font-weight:900}
-.house-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:20px}
+.house-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px}
 .house-card{position:relative;border-radius:20px;overflow:hidden;cursor:pointer;background:rgba(20,30,20,.88);border:2px solid rgba(200,220,180,.12);text-align:left;font-family:inherit;color:#e8e4dc;padding:0;box-shadow:0 15px 40px rgba(0,0,0,.4);transition:.25s}
 .house-card.active{border-color:#d4af6a;box-shadow:0 0 0 4px rgba(212,175,106,.15),0 20px 50px rgba(0,0,0,.6)}
 .hs-img{position:relative;width:100%;aspect-ratio:16/10;background-size:cover;background-position:center;filter:brightness(.88)}
@@ -61,6 +60,11 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 .hs-badge{position:absolute;top:12px;left:12px;background:rgba(10,15,10,.85);color:#d4af6a;padding:5px 10px;border-radius:8px;font-size:9px;font-weight:900;letter-spacing:2px;text-transform:uppercase;border:1px solid rgba(212,175,106,.4);z-index:2}
 .hs-check{position:absolute;top:12px;right:12px;width:28px;height:28px;border-radius:50%;background:#d4af6a;color:#0a0f0a;display:none;align-items:center;justify-content:center;font-weight:900;z-index:2}
 .house-card.active .hs-check{display:flex}
+.hs-video{position:absolute;bottom:12px;right:12px;z-index:3;display:inline-flex;align-items:center;gap:6px;padding:9px 14px;background:rgba(10,15,10,.88);border:1px solid rgba(212,175,106,.6);border-radius:30px;color:#d4af6a;font-size:11px;font-weight:700;backdrop-filter:blur(8px);cursor:pointer;font-family:inherit}
+.video-cta{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-bottom:16px;padding:16px 18px;background:rgba(212,175,106,.12);border:1px solid rgba(212,175,106,.55);border-radius:14px;color:#d4af6a;font-family:inherit;font-size:13px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;transition:.2s}
+.video-cta:hover{background:rgba(212,175,106,.22);border-color:#d4af6a}
+.video-cta:active{transform:scale(.98)}
+.vc-play{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#d4af6a,#b8945a);color:#0a0f0a;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
 .hs-info{padding:16px 18px 18px}
 .hs-name{font-size:19px;font-weight:900;text-transform:uppercase;margin-bottom:8px;background:linear-gradient(to right,#f0ede6 30%,#d4af6a);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hs-feat{display:flex;gap:14px;font-size:11px;color:#b8b3a8;margin-bottom:10px}
@@ -86,8 +90,7 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 .bk-field{margin-bottom:14px}
 .bk-field label{display:block;font-size:11px;font-weight:600;color:#c0bbb0;margin-bottom:7px;letter-spacing:1px;text-transform:uppercase}
 .bk-field input,.bk-field select{width:100%;padding:15px 16px;border:1px solid rgba(200,220,180,.12);border-radius:10px;font-size:16px;color:#e8e4dc;background:rgba(20,30,20,.7);outline:none;font-family:inherit;-webkit-appearance:none;appearance:none}
-.bk-field input:focus,.bk-field select:focus{border-color:#d4af6a;box-shadow:0 0 0 3px rgba(212,175,106,.15)}
-.bk-field select option{background:#0d1410;color:#e8e4dc}
+.bk-field input:focus,.bk-field select:focus{border-color:#d4af6a}
 .bk-services{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .bk-serv{display:flex;flex-direction:column;align-items:center;gap:4px;padding:14px 8px;background:rgba(20,30,20,.7);border:1px solid rgba(200,220,180,.1);border-radius:12px;cursor:pointer;font-family:inherit;color:#e8e4dc}
 .bk-serv.active{background:rgba(212,175,106,.15);border-color:#d4af6a}
@@ -95,55 +98,57 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 .bk-serv-name{font-size:12px;font-weight:700}
 .bk-serv-price{font-size:11px;color:#8a9080}
 .bk-serv.active .bk-serv-price{color:#d4af6a}
-.agree{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:rgba(200,184,138,.06);border:1px solid rgba(200,184,138,.25);border-radius:14px;margin-bottom:14px;cursor:pointer}
+.agree{display:flex;align-items:flex-start;gap:12px;padding:15px;background:rgba(200,184,138,.06);border:1px solid rgba(200,184,138,.25);border-radius:14px;margin-bottom:16px;cursor:pointer}
 .agree input{display:none}
-.agree-box{width:22px;height:22px;border-radius:6px;border:2px solid rgba(200,184,138,.5);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.agree input:checked+.agree-box{background:#d4af6a;border-color:#d4af6a}
-.agree input:checked+.agree-box::after{content:'✓';color:#0a0f0a;font-weight:900;font-size:13px}
+.agree-box{width:22px;height:22px;border-radius:6px;border:2px solid rgba(200,184,138,.5);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.agree input:checked + .agree-box{background:#d4af6a;border-color:#d4af6a}
+.agree input:checked + .agree-box::after{content:'✓';color:#0a0f0a;font-weight:900;font-size:13px}
 .agree-text{font-size:12.5px;color:#c8c3b8;line-height:1.5}
 .agree-text a{color:#d4af6a}
-.bk-total{background:rgba(20,30,20,.85);border:1px solid rgba(200,184,138,.2);border-radius:14px;padding:16px 18px;margin-bottom:14px}
-.bk-row{display:flex;justify-content:space-between;font-size:13px;color:#a09b90;margin-bottom:7px}
+.bk-total{background:rgba(20,30,20,.85);border:1px solid rgba(200,184,138,.2);border-radius:14px;padding:16px 18px;margin-bottom:16px}
+.bk-row{display:flex;justify-content:space-between;font-size:13px;color:#a09b90;padding:4px 0}
 .bk-row span:last-child{font-weight:600;color:#e8e4dc}
-.bk-final{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:12px;border-top:1px dashed rgba(200,184,138,.3);font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.bk-final{display:flex;justify-content:space-between;align-items:center;margin-top:8px;padding-top:12px;border-top:1px dashed rgba(200,184,138,.3);font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
 .bk-final span:last-child{color:#d4af6a;font-size:24px}
 .bk-submit{width:100%;padding:18px;background:linear-gradient(135deg,#d4af6a,#b8945a);color:#1a1508;border:none;border-radius:12px;font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:2px;cursor:pointer;box-shadow:0 10px 30px rgba(212,175,106,.35);font-family:inherit}
 .bk-submit:disabled{background:#2a2a24;color:#6a6a60;box-shadow:none}
-.bk-policy{font-size:10.5px;color:#7a7a70;text-align:center;line-height:1.6;margin-top:12px}
-.done{display:none;max-width:520px;margin:0 auto;background:rgba(20,30,20,.94);border:1px solid rgba(200,184,138,.35);border-radius:20px;padding:26px 20px}
-.done.show{display:block;animation:up .5s ease}
-.done-emoji{font-size:52px;text-align:center;margin-bottom:10px}
-.done-title{font-size:22px;font-weight:900;text-transform:uppercase;text-align:center;margin-bottom:6px;background:linear-gradient(to right,#f0ede6 30%,#d4af6a);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.done-sub{font-size:13px;color:#b0aa9e;text-align:center;margin-bottom:18px}
+.bk-policy{font-size:10.5px;color:#7a7a70;text-align:center;line-height:1.6;margin-top:14px}
+.done{display:none;max-width:520px;margin:0 auto;text-align:center;background:rgba(20,30,20,.94);border:1px solid rgba(200,184,138,.35);border-radius:20px;padding:26px 20px}
+.done.show{display:block}
+.done-emoji{font-size:52px;margin-bottom:10px}
+.done-title{font-size:23px;font-weight:900;text-transform:uppercase;margin-bottom:6px;background:linear-gradient(to right,#f0ede6 30%,#d4af6a);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.done-sub{font-size:13px;color:#b0aa9e;margin-bottom:18px}
 .done-sub b{color:#d4af6a}
-.done-sum{background:rgba(255,255,255,.03);border:1px solid rgba(200,220,180,.1);border-radius:14px;padding:4px 16px;margin-bottom:14px}
+.done-sum{background:rgba(255,255,255,.03);border:1px solid rgba(200,220,180,.1);border-radius:14px;padding:4px 16px;text-align:left}
 .done-row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed rgba(200,184,138,.16);font-size:13.5px}
 .done-row:last-child{border-bottom:0}
 .done-row span:first-child{color:#a09b90}
 .done-row span:last-child{font-weight:700;text-align:right}
 .done-row.total span:last-child{color:#d4af6a;font-size:18px;font-weight:900}
-.pay-card{background:rgba(212,175,106,.08);border:1px solid rgba(212,175,106,.35);border-radius:14px;padding:16px;text-align:center;margin-bottom:14px}
+.pay-card{background:rgba(212,175,106,.08);border:1px solid rgba(212,175,106,.35);border-radius:14px;padding:16px;margin-top:16px}
 .pay-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#c0bbb0;margin-bottom:8px}
-.pay-num{font-size:20px;font-weight:900;letter-spacing:1px;color:#f0ede6;margin-bottom:12px;word-break:break-all}
+.pay-num{font-size:20px;font-weight:900;letter-spacing:1px;margin-bottom:12px}
 .pay-copy{padding:10px 18px;background:rgba(212,175,106,.15);border:1px solid rgba(212,175,106,.5);border-radius:10px;color:#d4af6a;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit}
-.done-btn{display:block;width:100%;padding:15px;border-radius:12px;border:1px solid rgba(200,220,180,.15);background:rgba(255,255,255,.04);color:#e8e4dc;font-family:inherit;font-size:13.5px;font-weight:700;text-align:center;text-decoration:none;cursor:pointer;margin-top:10px}
-.done-btn.go{background:linear-gradient(135deg,#d4af6a,#b8945a);color:#1a1508;border-color:#d4af6a;font-weight:900;text-transform:uppercase;letter-spacing:.5px;box-shadow:0 12px 30px rgba(212,175,106,.45);padding:18px 16px;font-size:14px}
-.done-btn.go small{display:block;font-size:11px;font-weight:600;opacity:.8;letter-spacing:0;text-transform:none;margin-top:3px}
-.done-note{font-size:11.5px;line-height:1.6;color:#8a9080;background:rgba(255,255,255,.03);border-radius:12px;padding:13px;margin-top:14px}
+.done-btn{display:block;width:100%;margin-top:10px;padding:15px;border-radius:12px;border:1px solid rgba(200,220,180,.15);background:rgba(255,255,255,.04);color:#e8e4dc;font-family:inherit;font-size:13.5px;font-weight:700;text-align:center;text-decoration:none;cursor:pointer}
+.done-btn.go{background:linear-gradient(135deg,#d4af6a,#b8945a);color:#1a1508;border-color:#d4af6a;font-weight:900;text-transform:uppercase;letter-spacing:.5px;box-shadow:0 12px 30px rgba(212,175,106,.45)}
+.done-btn.go small{display:block;font-size:10.5px;font-weight:600;opacity:.8;letter-spacing:0;margin-top:3px;text-transform:none}
+.done-note{font-size:11.5px;line-height:1.6;color:#8a9080;background:rgba(255,255,255,.03);border-radius:12px;padding:14px;margin-top:14px;text-align:left}
 .done-note b{color:#c8b88a}
-.sticky{display:none;position:fixed;bottom:0;left:0;right:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(10,15,10,.98),rgba(10,15,10,.85));border-top:1px solid rgba(200,184,138,.2);z-index:50}
+.sticky{display:none;position:fixed;bottom:0;left:0;right:0;padding:14px 16px calc(14px + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(10,15,10,.98),rgba(10,15,10,.85));backdrop-filter:blur(20px);border-top:1px solid rgba(200,184,138,.2);z-index:50}
 .sticky button{width:100%;padding:16px;background:linear-gradient(135deg,#d4af6a,#b8945a);color:#1a1508;border:none;border-radius:12px;font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:2px;cursor:pointer;font-family:inherit}
-.fab{position:fixed;right:16px;bottom:92px;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#d4af6a,#b8945a);box-shadow:0 8px 24px rgba(0,0,0,.4);z-index:60;text-decoration:none}
+.fab{position:fixed;right:16px;bottom:92px;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#d4af6a,#b8945a);box-shadow:0 8px 24px rgba(0,0,0,.4);z-index:60}
 .fab svg{width:24px;height:24px;fill:#1a1508}
-.toast{position:fixed;top:20px;left:50%;transform:translateX(-50%) translateY(-120%);background:#1a2018;color:#e8e4dc;border:1px solid rgba(200,184,138,.3);padding:14px 22px;border-radius:12px;font-size:14px;font-weight:600;z-index:100000;transition:transform .35s;max-width:calc(100% - 32px);text-align:center}
-.toast.show{transform:translateX(-50%) translateY(0)}
-.toast.error{border-color:#e08888;color:#e08888}
-.toast.success{border-color:rgba(200,184,138,.6);color:#d4af6a}
-#confetti{position:fixed;inset:0;pointer-events:none;z-index:99999;display:none}
-@media(max-width:768px){.sticky{display:block}#booking{padding-bottom:130px}}
+.vid-modal{display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.93);align-items:center;justify-content:center;padding:16px}
+.vid-modal.show{display:flex}
+.vid-box{position:relative;width:100%;max-width:400px;aspect-ratio:9/16;background:#000;border-radius:16px;overflow:hidden;border:1px solid rgba(212,175,106,.4)}
+.vid-box iframe{width:100%;height:100%;border:0;display:block}
+.vid-close{position:fixed;top:16px;right:16px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:20px;line-height:1;cursor:pointer;font-family:inherit;z-index:100001;display:flex;align-items:center;justify-content:center}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:99998;display:none}
+@media(max-width:768px){.sticky{display:block}#booking{padding-bottom:130px}.fab{bottom:92px}}
 </style>
 </head>
 <body>
+
 <section class="screen" id="hero">
   <div class="hero-bg"></div>
   <div class="hero-ov"></div>
@@ -153,6 +158,8 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
     <p class="hero-sub">Треугольные домики в 3 км от Гомеля. Баня, купель, зона барбекю, беседка, качели.</p>
     <a href="#booking" class="btn-gold">Забронировать</a><br>
     <a href="https://yandex.by/maps/org/afreym_chenki/174703613605/" target="_blank" rel="noopener" class="btn-ghost">📍 Мы на карте</a>
+    <br>
+    <a href="#" class="btn-ghost" data-video="IjMnJZ8kI78">▶ Видео о домике №2</a>
   </div>
   <a href="#gallery" class="scroll-hint">↓ Листай вниз</a>
 </section>
@@ -160,14 +167,35 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 <section class="screen" id="gallery">
   <div class="g-title"><h2>Галерея</h2><p>Наши домики</p></div>
   <div class="g-track">
-    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/в домике 1.png')"></div><div class="g-info"><span class="g-tag">Домик №1</span><div class="g-name">А-Фрейм №1</div></div></div>
-    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/улица-домик-2.png')"></div><div class="g-info"><span class="g-tag">Домик №2</span><div class="g-name">А-Фрейм №2</div></div></div>
-    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/дом-баня-вход.png')"></div><div class="g-info"><span class="g-tag">Баня</span><div class="g-name">Русская баня</div></div></div>
-    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/купель.png')"></div><div class="g-info"><span class="g-tag">Купель</span><div class="g-name">Кедровая купель</div></div></div>
-    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/сам-домик-на-заглавную.png')"></div><div class="g-info"><span class="g-tag">Комплекс</span><div class="g-name">Всё включено</div></div></div>
+    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/v-domike-1.jpg')"></div><div class="g-info"><span class="g-tag">Домик №1</span><div class="g-name">А-Фрейм №1</div></div></div>
+    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/v-domike-vid.jpg')"></div><div class="g-info"><span class="g-tag">Домик №1</span><div class="g-name">Вид из окна</div></div></div>
+    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/ylicadomik2.jpg')"></div><div class="g-info"><span class="g-tag">Домик №2</span><div class="g-name">А-Фрейм №2</div></div></div>
+    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/ylica-zona-otdiha2.jpg')"></div><div class="g-info"><span class="g-tag">Территория</span><div class="g-name">Зона отдыха</div></div></div>
+    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/domik-banya-vhod.jpg')"></div><div class="g-info"><span class="g-tag">Баня</span><div class="g-name">Вход в баню</div></div></div>
+    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/kypel.jpg')"></div><div class="g-info"><span class="g-tag">Купель</span><div class="g-name">Кедровая купель</div></div></div>
+    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/kupel-and-banya-2.jpg')"></div><div class="g-info"><span class="g-tag">Комплекс</span><div class="g-name">Купель и баня</div></div></div>
+    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/banya-domik-2.jpg')"></div><div class="g-info"><span class="g-tag">Баня</span><div class="g-name">Баня №2</div></div></div>
+    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/domik-banya-1.jpg')"></div><div class="g-info"><span class="g-tag">Баня</span><div class="g-name">Банный домик</div></div></div>
+    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/domik-bonya.jpg')"></div><div class="g-info"><span class="g-tag">Баня</span><div class="g-name">Русская баня</div></div></div>
+    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/v-domike-1-tyalet.jpg')"></div><div class="g-info"><span class="g-tag">Домик №1</span><div class="g-name">Внутри</div></div></div>
+    <div class="g-card"><div class="g-photo" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/samdomiknazaglavnyu.jpg')"></div><div class="g-info"><span class="g-tag">Комплекс</span><div class="g-name">Наш домик</div></div></div>
   </div>
 </section>
+    var t=$(seen?"booking":"gallery");
+    if(t)t.scrollIntoView({behavior:"smooth"});
+  };
 
+  fetch(API+"?action=list&_="+Date.now())
+    .then(function(r){return r.json();})
+    .then(function(d){if(d&&d.ok&&d.booked)booked=d.booked;})
+    .catch(function(){})
+    .then(function(){renderCal();recalc();updSticky();});
+
+  renderCal();recalc();updSticky();
+})();
+</script>
+</body>
+</html>
 <section class="screen" id="booking">
   <div class="b-head">
     <span class="tag">◆ Забронировать</span>
@@ -184,7 +212,7 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 
     <div class="house-grid">
       <button type="button" class="house-card active" data-house="1">
-        <div class="hs-img" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/в домике 1.png')">
+        <div class="hs-img" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/v-domike-1.jpg')">
           <span class="hs-badge">◆ Домик №1</span><span class="hs-check">✓</span>
         </div>
         <div class="hs-info">
@@ -194,8 +222,9 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
         </div>
       </button>
       <button type="button" class="house-card" data-house="2">
-        <div class="hs-img" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/main/улица-домик-2.png')">
+        <div class="hs-img" style="background-image:url('https://raw.githubusercontent.com/semya435-a11y/aframe_photo/master/ylicadomik2.jpg')">
           <span class="hs-badge">◆ Домик №2</span><span class="hs-check">✓</span>
+          <span class="hs-video" data-video="IjMnJZ8kI78">▶ Видео о домике</span>
         </div>
         <div class="hs-info">
           <div class="hs-name">А-Фрейм №2</div>
@@ -204,6 +233,8 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
         </div>
       </button>
     </div>
+
+    <button type="button" class="video-cta" data-video="IjMnJZ8kI78"><span class="vc-play">▶</span> Видео-обзор домика №2</button>
 
     <div class="cal-wrap">
       <div class="cal-head">
@@ -284,83 +315,109 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
 <a class="fab" href="tel:+375295313694" aria-label="Позвонить"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.58 3.6a1 1 0 0 1-.25 1z"/></svg></a>
 <canvas id="confetti"></canvas>
 
+<div class="vid-modal" id="vidModal">
+  <div class="vid-box">
+    <button type="button" class="vid-close" id="vidClose">✕</button>
+    <iframe id="vidFrame" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
 <script>
 (function(){
   var API="https://script.google.com/macros/s/AKfycbx64AsrgtgLiqjV3cshq4VaerEzf_zMOMDPNtvS7BUhTlQWi2QWOY_TXgrTaNb9gFq2/exec";
   var BOT="aframe_chenki_bot";
   var INSTA="https://www.instagram.com/aframe_chenki/";
-  var HOUSES={"1":{name:"А-Фрейм №1",wd:300,we:350},"2":{name:"А-Фрейм №2",wd:300,we:350}};
-  var MONTHS=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
-  var MONTHS_G=["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
   var state={house:"1",date:"",guests:2,service:"none",servicePrice:0};
-  var view=new Date(),booked={"1":[],"2":[]},busy=false,last=null;
+  var viewDate=new Date();
+  var booked={"1":[],"2":[]};
+  var busy=false;
 
   function $(id){return document.getElementById(id);}
-  function p2(n){return n<10?"0"+n:""+n;}
+  function p2(n){return n<10?"0"+n:String(n);}
   function iso(d){return d.getFullYear()+"-"+p2(d.getMonth()+1)+"-"+p2(d.getDate());}
-  function parse(s){var p=s.split("-");return new Date(+p[0],+p[1]-1,+p[2]);}
   function money(n){return n.toLocaleString("ru-RU")+" Br";}
-  function toast(msg,type){
-    var t=document.createElement("div");
-    t.className="toast "+(type||"");t.textContent=msg;
+  function fmt(isoStr){var d=new Date(isoStr+"T12:00:00");return d.toLocaleDateString("ru-RU",{day:"numeric",month:"long"});}
+  function makeId(ds){return "AF-"+ds.replace(/-/g,"").slice(2)+"-"+Math.random().toString(36).slice(2,5).toUpperCase();}
+
+  function toast(msg){
+    var t=document.querySelector(".toast");
+    if(t)t.remove();
+    t=document.createElement("div");
+    t.className="toast";
+    t.textContent=msg;
+    t.style.cssText="position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#1a2018;color:#e8e4dc;border:1px solid rgba(200,184,138,.4);padding:14px 22px;border-radius:12px;font-size:14px;font-weight:600;z-index:100000;max-width:calc(100% - 32px);text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.5)";
     document.body.appendChild(t);
-    requestAnimationFrame(function(){t.classList.add("show");});
-    setTimeout(function(){t.classList.remove("show");setTimeout(function(){t.remove();},400);},4500);
+    setTimeout(function(){t.remove();},4500);
   }
 
+  function loadBooked(){
+    fetch(API+"?action=list&_="+Date.now(),{cache:"no-store"})
+      .then(function(r){return r.json();})
+      .then(function(d){ if(d&&d.ok&&d.booked){booked=d.booked;} renderCal(); })
+      .catch(function(){});
+  }
+
+  function isBooked(h,d){return booked[h]&&booked[h].indexOf(d)!==-1;}
+
   function priceOf(ds){
-    var d=parse(ds),dow=d.getDay(),m=d.getMonth(),day=d.getDate();
+    var d=new Date(ds+"T12:00:00"),dow=d.getDay(),m=d.getMonth(),day=d.getDate();
     var ny=(m===11&&day>=20)||(m===0&&day<=10);
-    var we=(dow===5||dow===6);
-    if(ny)return (we||dow===0)?400:350;
-    return we?350:300;
+    if(ny) return (dow===5||dow===6||dow===0)?400:350;
+    return (dow===5||dow===6)?350:300;
   }
 
   function renderCal(){
-    var y=view.getFullYear(),m=view.getMonth();
-    $("calMonth").textContent=MONTHS[m]+" "+y;
-    var first=new Date(y,m,1),sw=first.getDay()-1;if(sw<0)sw=6;
-    var dim=new Date(y,m+1,0).getDate(),today=new Date(),ts=iso(today);
+    var y=viewDate.getFullYear(),mo=viewDate.getMonth();
+    var names=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+    $("calMonth").textContent=names[mo]+" "+y;
+    var first=new Date(y,mo,1),sw=first.getDay()-1;
+    if(sw<0)sw=6;
+    var dim=new Date(y,mo+1,0).getDate(),today=new Date();
+    var ts=iso(today);
     var html="";
     for(var i=0;i<sw;i++)html+='<div class="cal-day empty"></div>';
     for(var d=1;d<=dim;d++){
-      var ds=y+"-"+p2(m+1)+"-"+p2(d),cls="cal-day",dow=new Date(y,m,d).getDay();
+      var ds=y+"-"+p2(mo+1)+"-"+p2(d);
+      var dow=new Date(ds+"T12:00:00").getDay();
+      var cls="cal-day";
       if(dow===5||dow===6)cls+=" weekend";
       if(ds===state.date)cls+=" selected";
       if(ds<ts)cls+=" past";
-      if(booked[state.house].indexOf(ds)!==-1)cls+=" disabled";
-      html+='<div class="'+cls+'" data-date="'+ds+'">'+d+'</div>';
+      if(isBooked(state.house,ds))cls+=" disabled";
+      html+='<button type="button" class="'+cls+'" data-date="'+ds+'">'+d+'</button>';
     }
     $("calDays").innerHTML=html;
     var now=new Date();
-    $("calPrev").disabled=(y===now.getFullYear()&&m===now.getMonth());
+    $("calPrev").disabled=(y===now.getFullYear()&&mo===now.getMonth());
   }
 
   $("calDays").addEventListener("click",function(e){
-    var el=e.target.closest(".cal-day");
-    if(!el||el.classList.contains("disabled")||el.classList.contains("past")||el.classList.contains("empty"))return;
-    state.date=el.dataset.date;
-    renderCal();recalc();
+    var b=e.target.closest(".cal-day");
+    if(!b||b.classList.contains("disabled")||b.classList.contains("past")||b.classList.contains("empty"))return;
+    state.date=b.getAttribute("data-date");
+    renderCal(); recalc();
+    setTimeout(function(){$("bkForm").scrollIntoView({behavior:"smooth",block:"start"});},200);
   });
-  $("calPrev").onclick=function(){view.setMonth(view.getMonth()-1);renderCal();};
-  $("calNext").onclick=function(){view.setMonth(view.getMonth()+1);renderCal();};
+  $("calPrev").onclick=function(){viewDate.setMonth(viewDate.getMonth()-1);renderCal();};
+  $("calNext").onclick=function(){viewDate.setMonth(viewDate.getMonth()+1);renderCal();};
 
   document.querySelectorAll(".house-card").forEach(function(c){
-    c.onclick=function(){
+    c.addEventListener("click",function(e){
+      if(e.target.closest(".hs-video"))return;
       document.querySelectorAll(".house-card").forEach(function(x){x.classList.remove("active");});
       c.classList.add("active");
-      state.house=c.dataset.house;
-      if(booked[state.house].indexOf(state.date)!==-1)state.date="";
-      renderCal();recalc();
-    };
+      state.house=c.getAttribute("data-house");
+      state.date="";
+      renderCal(); recalc();
+    });
   });
 
   document.querySelectorAll(".bk-serv").forEach(function(b){
     b.onclick=function(){
       document.querySelectorAll(".bk-serv").forEach(function(x){x.classList.remove("active");});
       b.classList.add("active");
-      state.service=b.dataset.service;
-      state.servicePrice=parseInt(b.dataset.price)||0;
+      state.service=b.getAttribute("data-service");
+      state.servicePrice=parseInt(b.getAttribute("data-price"))||0;
       recalc();
     };
   });
@@ -368,136 +425,179 @@ h1{font-size:clamp(1.8rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;l
   $("bkGuests").onchange=function(){state.guests=parseInt(this.value)||2;recalc();};
 
   function recalc(){
-    var h=HOUSES[state.house];
-    $("tHouse").textContent=h.name;
-    if(!state.date){$("tDate").textContent="—";$("tBase").textContent="—";$("tTotal").textContent="0 Br";$("bkHint").textContent="Выберите дату заезда";$("bkHint").className="bk-hint";return 0;}
-    var base=priceOf(state.date),gExtra=Math.max(0,state.guests-2)*50,total=base+gExtra+state.servicePrice;
-    var d=parse(state.date);
-    $("tDate").textContent=d.getDate()+" "+MONTHS_G[d.getMonth()];
+    var houseName=state.house==="1"?"А-Фрейм №1":"А-Фрейм №2";
+    $("tHouse").textContent=houseName;
+    if(!state.date){
+      $("tDate").textContent="—";$("tBase").textContent="—";$("tTotal").textContent="0 Br";
+      $("bkHint").textContent="Выберите дату заезда";
+      $("bkHint").className="bk-hint";
+      return 0;
+    }
+    var base=priceOf(state.date);
+    var gExtra=Math.max(0,state.guests-2)*50;
+    var total=base+gExtra+state.servicePrice;
+    $("tDate").textContent=fmt(state.date);
     $("tBase").textContent=money(base);
-    if(gExtra>0){$("tGuestsRow").style.display="flex";$("tGuests").textContent=money(gExtra);}else{$("tGuestsRow").style.display="none";}
-    if(state.servicePrice>0){$("tServRow").style.display="flex";$("tServ").textContent=money(state.servicePrice);}else{$("tServRow").style.display="none";}
+    if(gExtra>0){$("tGuestsRow").style.display="flex";$("tGuests").textContent=money(gExtra);}
+    else $("tGuestsRow").style.display="none";
+    if(state.servicePrice>0){$("tServRow").style.display="flex";$("tServ").textContent=money(state.servicePrice);}
+    else $("tServRow").style.display="none";
     $("tTotal").textContent=money(total);
+    var d=new Date(state.date+"T12:00:00");
     var dow=d.getDay();
-    $("bkHint").textContent="🗓 "+d.toLocaleDateString("ru-RU")+(dow===6?" · суббота: баня/купель обязательна":"");
+    var hint="🗓 "+d.toLocaleDateString("ru-RU");
+    if(dow===6)hint+=" · суббота: баня или купель обязательна";
+    $("bkHint").textContent=hint;
     $("bkHint").className="bk-hint"+((dow===5||dow===6)?" weekend":"");
     return total;
   }
 
-  function addDay(s){var d=parse(s);d.setDate(d.getDate()+1);return iso(d);}
-  function fmtRu(s){var d=parse(s);return d.getDate()+" "+MONTHS_G[d.getMonth()]+" "+d.getFullYear();}
-  function fmtShort(s){var d=parse(s);return d.getDate()+" "+MONTHS_G[d.getMonth()];}
+  $("bkForm").addEventListener("submit",function(e){
+    e.preventDefault();
+    if(busy)return;
+    var name=$("bkName").value.trim();
+    var phone=$("bkPhone").value.trim();
+    var insta=$("bkInsta").value.trim();
+    if(!state.date){toast("Выберите дату!");return;}
+    if(!name){toast("Введите имя!");return;}
+    if(!phone){toast("Введите телефон!");return;}
+    if(!$("agreeCheck").checked){toast("Поставьте галочку согласия");return;}
+    if(state.service==="none"&&new Date(state.date+"T12:00:00").getDay()===6){
+      toast("Суббота: выберите баню или купель");return;
+    }
+    if(isBooked(state.house,state.date)){toast("Эта дата только что занята");state.date="";renderCal();recalc();return;}
+
+    var total=recalc();
+    var bid=makeId(state.date);
+    var outD=new Date(state.date+"T12:00:00");outD.setDate(outD.getDate()+1);
+    var btn=$("bkSubmit");
+    busy=true;btn.disabled=true;btn.textContent="⏳ Отправка...";
+
+    var fd=new URLSearchParams();
+    fd.append("date",state.date);
+    fd.append("checkOut",iso(outD));
+    fd.append("bookingId",bid);
+    fd.append("house",state.house);
+    fd.append("name",name);
+    fd.append("phone",phone);
+    fd.append("instagram",insta);
+    fd.append("guests",state.guests);
+    fd.append("serviceLabel",state.service);
+    fd.append("total",String(total));
+
+    fetch(API,{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:fd.toString()})
+      .then(function(r){return r.json();})
+      .then(function(d){
+        if(d&&d.ok){ showDone(total,phone,bid); }
+        else { toast("❌ "+((d&&d.error)||"Не удалось отправить")); }
+      })
+      .catch(function(){ toast("❌ Ошибка сети. Попробуйте ещё раз."); })
+      .finally(function(){ busy=false;btn.disabled=false;btn.textContent="✅ Забронировать"; });
+  });
+
+  function showDone(total,phone,id){
+    var d=new Date(state.date+"T12:00:00");
+    var out=new Date(d);out.setDate(out.getDate()+1);
+    $("dId").textContent=id;
+    $("dDate").textContent=fmt(state.date)+" → "+fmt(iso(out));
+    $("dHouse").textContent=state.house==="1"?"А-Фрейм №1":"А-Фрейм №2";
+    $("dIn").textContent=fmt(state.date)+", с 15:00";
+    $("dOut").textContent=fmt(iso(out))+", до 12:00";
+    $("dGuests").textContent=state.guests+" гост.";
+    $("dTotal").textContent=money(total);
+    $("btnTg").href="https://t.me/"+BOT+"?start="+phone.replace(/\D/g,"");
+    $("bkForm").style.display="none";
+    $("doneBlock").classList.add("show");
+    $("doneBlock").scrollIntoView({behavior:"smooth",block:"center"});
+    confetti();
+    loadBooked();
+
+    state.date="";
+    state.service="none";
+    state.servicePrice=0;
+    state.guests=2;
+    $("bkForm").reset();
+    document.querySelectorAll(".bk-serv").forEach(function(x){x.classList.remove("active");});
+    var noneBtn=document.querySelector('.bk-serv[data-service="none"]');
+    if(noneBtn)noneBtn.classList.add("active");
+    renderCal(); recalc();
+  }
+
+  $("payCopy").onclick=function(){
+    var n=$("payNum").textContent.replace(/\s/g,"");
+    if(navigator.clipboard)navigator.clipboard.writeText(n).then(function(){toast("Номер скопирован");});
+    else toast("Номер: "+n);
+  };
+  $("btnHome").onclick=function(){window.scrollTo({top:0,behavior:"smooth"});};
+
+  var seen=false;
+  function updateSticky(){
+    var s=$("stickyBook");
+    if(!s)return;
+    var g=$("gallery");
+    if(!seen&&g&&g.getBoundingClientRect().bottom<window.innerHeight*0.6)seen=true;
+    s.textContent=seen?"🏡 Забронировать домик":"👀 Смотреть домики и цены";
+  }
+  window.addEventListener("scroll",updateSticky,{passive:true});
+  $("stickyBook").onclick=function(){
+    var t=$(seen?"booking":"gallery");
+    if(t)t.scrollIntoView({behavior:"smooth"});
+  };
+
+  var vm=$("vidModal"),vf=$("vidFrame");
+  document.querySelectorAll("[data-video]").forEach(function(b){
+    b.addEventListener("click",function(e){
+      e.preventDefault();e.stopPropagation();
+      vf.src="https://www.youtube.com/embed/"+b.getAttribute("data-video")+"?autoplay=1&rel=0&playsinline=1";
+      vm.classList.add("show");
+      document.body.style.overflow="hidden";
+    });
+  });
+  function closeVid(){
+    vm.classList.remove("show");
+    vf.src="";
+    document.body.style.overflow="";
+  }
+  $("vidClose").onclick=closeVid;
+  vm.addEventListener("click",function(e){if(e.target===vm)closeVid();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")closeVid();});
 
   function confetti(){
-    var c=$("confetti"),ctx=c.getContext("2d"),parts=[],raf=null;
-    var COL=["#d4af6a","#b8945a","#f0ede6","#8fbf6a","#4a90a4","#e0a868"];
+    var c=$("confetti"),ctx=c.getContext("2d");
     var dpr=Math.min(window.devicePixelRatio||1,2);
     c.width=innerWidth*dpr;c.height=innerHeight*dpr;
     c.style.width=innerWidth+"px";c.style.height=innerHeight+"px";
     ctx.setTransform(dpr,0,0,dpr,0,0);
     c.style.display="block";
-    for(var i=0;i<160;i++)parts.push({x:innerWidth/2+(Math.random()-.5)*innerWidth*.5,y:innerHeight*.28+(Math.random()-.5)*90,vx:(Math.random()-.5)*9,vy:Math.random()*-9-3,g:.22+Math.random()*.12,w:5+Math.random()*6,h:8+Math.random()*8,rot:Math.random()*Math.PI,vr:(Math.random()-.5)*.25,color:COL[(Math.random()*COL.length)|0],life:1});
+    var cols=["#d4af6a","#b8945a","#f0ede6","#8fbf6a","#4a90a4","#e0a868"];
+    var parts=[];
+    for(var i=0;i<160;i++){
+      parts.push({x:innerWidth/2+(Math.random()-.5)*innerWidth*.5,y:innerHeight*.25+(Math.random()-.5)*90,
+        vx:(Math.random()-.5)*9,vy:Math.random()*-9-3,g:.22+Math.random()*.12,
+        w:5+Math.random()*6,h:8+Math.random()*8,rot:Math.random()*Math.PI,vr:(Math.random()-.5)*.25,
+        color:cols[(Math.random()*cols.length)|0],life:1});
+    }
     function tick(){
       ctx.clearRect(0,0,innerWidth,innerHeight);
       parts=parts.filter(function(p){return p.life>0&&p.y<innerHeight+80;});
       parts.forEach(function(p){
         p.vy+=p.g;p.x+=p.vx;p.y+=p.vy;p.vx*=.995;p.rot+=p.vr;
         if(p.y>innerHeight*.7)p.life-=.012;
-        ctx.save();ctx.globalAlpha=Math.max(p.life,0);ctx.translate(p.x,p.y);ctx.rotate(p.rot);
-        ctx.fillStyle=p.color;ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);ctx.restore();
+        ctx.save();ctx.globalAlpha=Math.max(p.life,0);
+        ctx.translate(p.x,p.y);ctx.rotate(p.rot);
+        ctx.fillStyle=p.color;ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
+        ctx.restore();
       });
-      if(parts.length)raf=requestAnimationFrame(tick);
-      else{ctx.clearRect(0,0,innerWidth,innerHeight);c.style.display="none";raf=null;}
+      if(parts.length)requestAnimationFrame(tick);
+      else{ctx.clearRect(0,0,innerWidth,innerHeight);c.style.display="none";}
     }
-    if(!raf)raf=requestAnimationFrame(tick);
+    tick();
   }
 
-  function showDone(info){
-    last=info;
-    $("dId").textContent=info.id;
-    $("dDate").textContent=fmtRu(info.date)+" → "+fmtShort(info.checkOut);
-    $("dHouse").textContent=info.house;
-    $("dIn").textContent=fmtShort(info.date)+", с 15:00";
-    $("dOut").textContent=fmtShort(info.checkOut)+", до 12:00";
-    $("dGuests").textContent=info.guests+" гост.";
-    $("dTotal").textContent=money(info.total);
-    $("btnTg").href="https://t.me/"+BOT+(info.phone?"?start="+info.phone:"");
-    $("bkForm").style.display="none";
-    $("doneBlock").classList.add("show");
-    setTimeout(function(){$("doneBlock").scrollIntoView({behavior:"smooth",block:"center"});},120);
-    confetti();
-  }
-
-  $("payCopy").onclick=function(){
-    var n=$("payNum").textContent.replace(/\s/g,"");
-    if(navigator.clipboard)navigator.clipboard.writeText(n).then(function(){toast("Номер карты скопирован","success");});
-    else toast("Номер: "+n,"success");
-  };
-  $("btnHome").onclick=function(){window.scrollTo({top:0,behavior:"smooth"});};
-
-  $("bkForm").onsubmit=function(e){
-    e.preventDefault();
-    if(busy)return;
-    var name=$("bkName").value.trim(),phone=$("bkPhone").value.trim();
-    var insta=$("bkInsta").value.trim(),guests=state.guests;
-    if(!state.date)return toast("Выберите дату!","error");
-    if(name.length<2)return toast("Введите имя!","error");
-    if(phone.replace(/\D/g,"").length<9)return toast("Введите телефон!","error");
-    if(!$("agreeCheck").checked)return toast("Поставьте галочку согласия!","error");
-    if(state.service==="none"&&parse(state.date).getDay()===6)return toast("Суббота: выберите баню или купель!","error");
-
-    var total=recalc();
-    var checkOut=addDay(state.date);
-    var id="AF-"+state.date.replace(/-/g,"").slice(2)+"-"+Math.random().toString(36).slice(2,5).toUpperCase();
-
-    busy=true;
-    var btn=$("bkSubmit"),txt=btn.textContent;
-    btn.textContent="⏳ Отправка...";btn.disabled=true;
-
-    var fd=new URLSearchParams();
-    fd.append("date",state.date);fd.append("house",state.house);
-    fd.append("name",name);fd.append("phone",phone);
-    fd.append("instagram",insta);fd.append("guests",guests);
-    fd.append("serviceLabel",state.service);fd.append("total",String(total));
-
-    fetch(API,{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:fd.toString()})
-    .then(function(r){return r.json();})
-    .then(function(d){
-      if(d&&d.ok){
-        showDone({id:id,date:state.date,checkOut:checkOut,house:HOUSES[state.house].name,guests:guests,total:total,phone:phone.replace(/\D/g,"")});
-        if(booked[state.house].indexOf(state.date)===-1)booked[state.house].push(state.date);
-        $("bkForm").reset();$("agreeCheck").checked=false;
-        state.date="";state.service="none";state.servicePrice=0;state.guests=2;
-        document.querySelectorAll(".bk-serv").forEach(function(x,i){x.classList.toggle("active",i===0);});
-        renderCal();recalc();
-      }else{
-        toast("❌ "+((d&&d.error)||"Не удалось отправить"),"error");
-      }
-    })
-    .catch(function(){toast("❌ Ошибка сети. Попробуйте ещё раз.","error");})
-    .then(function(){busy=false;btn.textContent=txt;btn.disabled=false;});
-  };
-
-  var seen=false;
-  function updSticky(){
-    var s=$("stickyBook"),g=$("gallery");
-    if(!seen&&g&&g.getBoundingClientRect().bottom<innerHeight*.6)seen=true;
-    s.textContent=seen?"🏡 Забронировать домик":"👀 Смотреть домики и цены";
-  }
-  window.addEventListener("scroll",updSticky,{passive:true});
-  $("stickyBook").onclick=function(){
-    var t=$(seen?"booking":"gallery");
-    if(t)t.scrollIntoView({behavior:"smooth"});
-  };
-
-  fetch(API+"?action=list&_="+Date.now())
-    .then(function(r){return r.json();})
-    .then(function(d){if(d&&d.ok&&d.booked)booked=d.booked;})
-    .catch(function(){})
-    .then(function(){renderCal();recalc();updSticky();});
-
-  renderCal();recalc();updSticky();
+  renderCal();recalc();updateSticky();loadBooked();
+  setInterval(loadBooked,60000);
 })();
 </script>
 </body>
 </html>
+
